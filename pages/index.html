@@ -1,0 +1,4291 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Web Awesome Scaffold</title>
+
+    <!-- Web Awesome: theme stylesheet + autoloader (components load on demand) -->
+    <link rel="stylesheet" href="/webawesome/dist-cdn/styles/webawesome.css" />
+    <!-- Native styles give sensible defaults for <wa-page>, headings, links, etc. -->
+    <script
+      type="module"
+      src="/webawesome/dist-cdn/webawesome.ssr-loader.js"
+    ></script>
+
+    <style>
+      main {
+        max-width: max(275px, 50vw);
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <wa-page mobile-breakpoint="920" view="desktop">
+      <main>
+        <h2 id="native" class="anchor-heading">
+          Native
+          <a
+            id="native-permalink"
+            href="#native"
+            aria-labelledby="wa-tooltip-v1FXkrc9_bARYP1t5zkSY"
+          >
+            <wa-icon
+              name="hashtag"
+              label="Link to This Section"
+              role="img"
+              aria-label="Link to This Section"
+              library="default"
+              rotate="0"
+              style="--rotate-angle: 0deg"
+            ></wa-icon>
+          </a>
+        </h2>
+        <wa-tooltip for="native-permalink" id="wa-tooltip-v1FXkrc9_bARYP1t5zkSY"
+          >Link to This Section</wa-tooltip
+        >
+        <p>
+          Native style tests ensure that supported native elements and utilities
+          look the same as their Web Awesome component counterparts. Native
+          elements may also support the same appearance, color, and size
+          utilities as components.
+        </p>
+        <h3 id="button-2" class="anchor-heading">
+          Button
+          <a
+            id="button-2-permalink"
+            href="#button-2"
+            aria-labelledby="wa-tooltip-Nuz0LG8G3SH1mxAO1Fe0Q"
+          >
+            <wa-icon
+              name="hashtag"
+              label="Link to This Section"
+              role="img"
+              aria-label="Link to This Section"
+              library="default"
+              rotate="0"
+              style="--rotate-angle: 0deg"
+            ></wa-icon>
+          </a>
+        </h3>
+        <wa-tooltip
+          for="button-2-permalink"
+          id="wa-tooltip-Nuz0LG8G3SH1mxAO1Fe0Q"
+          >Link to This Section</wa-tooltip
+        >
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>
+                  <a class="component-ref" href="/docs/components/button"
+                    ><code>&lt;wa-button&gt;</code></a
+                  >
+                </th>
+                <th><code>&lt;button&gt;</code></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><em>default</em></th>
+                <td>
+                  <wa-button variant="neutral" appearance="accent" size="m"
+                    >Button</wa-button
+                  >
+                </td>
+                <td>
+                  <button>Button</button>
+                </td>
+              </tr>
+              <tr>
+                <th><code>accent</code></th>
+                <td>
+                  <div class="wa-cluster wa-gap-2xs">
+                    <wa-button variant="brand" appearance="accent" size="m"
+                      >Brand</wa-button
+                    >
+                    <wa-button variant="neutral" appearance="accent" size="m"
+                      >Neutral</wa-button
+                    >
+                    <wa-button variant="success" appearance="accent" size="m"
+                      >Success</wa-button
+                    >
+                    <wa-button variant="warning" appearance="accent" size="m"
+                      >Warning</wa-button
+                    >
+                    <wa-button variant="danger" appearance="accent" size="m"
+                      >Danger</wa-button
+                    >
+                  </div>
+                </td>
+                <td>
+                  <div class="wa-cluster wa-gap-2xs">
+                    <button class="wa-brand wa-accent">Brand</button>
+                    <button class="wa-neutral wa-accent">Neutral</button>
+                    <button class="wa-success wa-accent">Success</button>
+                    <button class="wa-warning wa-accent">Warning</button>
+                    <button class="wa-danger wa-accent">Danger</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th><code>filled-outlined</code></th>
+                <td>
+                  <div class="wa-cluster wa-gap-2xs">
+                    <wa-button
+                      variant="brand"
+                      appearance="filled-outlined"
+                      size="m"
+                      >Brand</wa-button
+                    >
+                    <wa-button
+                      variant="neutral"
+                      appearance="filled-outlined"
+                      size="m"
+                      >Neutral</wa-button
+                    >
+                    <wa-button
+                      variant="success"
+                      appearance="filled-outlined"
+                      size="m"
+                      >Success</wa-button
+                    >
+                    <wa-button
+                      variant="warning"
+                      appearance="filled-outlined"
+                      size="m"
+                      >Warning</wa-button
+                    >
+                    <wa-button
+                      variant="danger"
+                      appearance="filled-outlined"
+                      size="m"
+                      >Danger</wa-button
+                    >
+                  </div>
+                </td>
+                <td>
+                  <div class="wa-cluster wa-gap-2xs">
+                    <button class="wa-brand wa-filled wa-outlined">
+                      Brand
+                    </button>
+                    <button class="wa-neutral wa-filled wa-outlined">
+                      Neutral
+                    </button>
+                    <button class="wa-success wa-filled wa-outlined">
+                      Success
+                    </button>
+                    <button class="wa-warning wa-filled wa-outlined">
+                      Warning
+                    </button>
+                    <button class="wa-danger wa-filled wa-outlined">
+                      Danger
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th><code>filled</code></th>
+                <td>
+                  <div class="wa-cluster wa-gap-2xs">
+                    <wa-button variant="brand" appearance="filled" size="m"
+                      >Brand</wa-button
+                    >
+                    <wa-button variant="neutral" appearance="filled" size="m"
+                      >Neutral</wa-button
+                    >
+                    <wa-button variant="success" appearance="filled" size="m"
+                      >Success</wa-button
+                    >
+                    <wa-button variant="warning" appearance="filled" size="m"
+                      >Warning</wa-button
+                    >
+                    <wa-button variant="danger" appearance="filled" size="m"
+                      >Danger</wa-button
+                    >
+                  </div>
+                </td>
+                <td>
+                  <div class="wa-cluster wa-gap-2xs">
+                    <button class="wa-brand wa-filled">Brand</button>
+                    <button class="wa-neutral wa-filled">Neutral</button>
+                    <button class="wa-success wa-filled">Success</button>
+                    <button class="wa-warning wa-filled">Warning</button>
+                    <button class="wa-danger wa-filled">Danger</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th><code>outlined</code></th>
+                <td>
+                  <div class="wa-cluster wa-gap-2xs">
+                    <wa-button variant="brand" appearance="outlined" size="m"
+                      >Brand</wa-button
+                    >
+                    <wa-button variant="neutral" appearance="outlined" size="m"
+                      >Neutral</wa-button
+                    >
+                    <wa-button variant="success" appearance="outlined" size="m"
+                      >Success</wa-button
+                    >
+                    <wa-button variant="warning" appearance="outlined" size="m"
+                      >Warning</wa-button
+                    >
+                    <wa-button variant="danger" appearance="outlined" size="m"
+                      >Danger</wa-button
+                    >
+                  </div>
+                </td>
+                <td>
+                  <div class="wa-cluster wa-gap-2xs">
+                    <button class="wa-brand wa-outlined">Brand</button>
+                    <button class="wa-neutral wa-outlined">Neutral</button>
+                    <button class="wa-success wa-outlined">Success</button>
+                    <button class="wa-warning wa-outlined">Warning</button>
+                    <button class="wa-danger wa-outlined">Danger</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th><code>plain</code></th>
+                <td>
+                  <div class="wa-cluster wa-gap-2xs">
+                    <wa-button variant="brand" appearance="plain" size="m"
+                      >Brand</wa-button
+                    >
+                    <wa-button variant="neutral" appearance="plain" size="m"
+                      >Neutral</wa-button
+                    >
+                    <wa-button variant="success" appearance="plain" size="m"
+                      >Success</wa-button
+                    >
+                    <wa-button variant="warning" appearance="plain" size="m"
+                      >Warning</wa-button
+                    >
+                    <wa-button variant="danger" appearance="plain" size="m"
+                      >Danger</wa-button
+                    >
+                  </div>
+                </td>
+                <td>
+                  <div class="wa-cluster wa-gap-2xs">
+                    <button class="wa-brand wa-plain">Brand</button>
+                    <button class="wa-neutral wa-plain">Neutral</button>
+                    <button class="wa-success wa-plain">Success</button>
+                    <button class="wa-warning wa-plain">Warning</button>
+                    <button class="wa-danger wa-plain">Danger</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th><code>s</code></th>
+                <td>
+                  <wa-button size="s" variant="neutral" appearance="accent"
+                    >Small</wa-button
+                  >
+                </td>
+                <td>
+                  <button class="wa-size-s">Small</button>
+                </td>
+              </tr>
+              <tr>
+                <th><code>m</code></th>
+                <td>
+                  <wa-button size="m" variant="neutral" appearance="accent"
+                    >Medium</wa-button
+                  >
+                </td>
+                <td>
+                  <button class="wa-size-m">Medium</button>
+                </td>
+              </tr>
+              <tr>
+                <th><code>l</code></th>
+                <td>
+                  <wa-button size="l" variant="neutral" appearance="accent"
+                    >Large</wa-button
+                  >
+                </td>
+                <td>
+                  <button class="wa-size-l">Large</button>
+                </td>
+              </tr>
+              <tr>
+                <th><code>pill</code></th>
+                <td>
+                  <wa-button
+                    pill=""
+                    variant="neutral"
+                    appearance="accent"
+                    size="m"
+                    >Pill</wa-button
+                  >
+                </td>
+                <td>
+                  <button class="wa-pill">Pill</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <wa-divider
+          role="separator"
+          aria-orientation="horizontal"
+          orientation="horizontal"
+        ></wa-divider>
+        <h3 id="checkbox" class="anchor-heading">
+          Checkbox
+          <a
+            id="checkbox-permalink"
+            href="#checkbox"
+            aria-labelledby="wa-tooltip-65FsnuN2co0x8t9Ayfqjy"
+          >
+            <wa-icon
+              name="hashtag"
+              label="Link to This Section"
+              role="img"
+              aria-label="Link to This Section"
+              library="default"
+              rotate="0"
+              style="--rotate-angle: 0deg"
+            ></wa-icon>
+          </a>
+        </h3>
+        <wa-tooltip
+          for="checkbox-permalink"
+          id="wa-tooltip-65FsnuN2co0x8t9Ayfqjy"
+          >Link to This Section</wa-tooltip
+        >
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>
+                  <a class="component-ref" href="/docs/components/checkbox"
+                    ><code>&lt;wa-checkbox&gt;</code></a
+                  >
+                </th>
+                <th><code>&lt;input type="checkbox"&gt;</code></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><em>default</em></th>
+                <td>
+                  <wa-checkbox size="m" value="on">Checkbox</wa-checkbox>
+                </td>
+                <td>
+                  <label><input type="checkbox" /> Checkbox</label>
+                </td>
+              </tr>
+              <tr>
+                <th><code>checked</code></th>
+                <td>
+                  <wa-checkbox checked="" size="m" value="on"
+                    >Checkbox</wa-checkbox
+                  >
+                </td>
+                <td>
+                  <label><input type="checkbox" checked="" /> Checkbox</label>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <wa-divider
+          role="separator"
+          aria-orientation="horizontal"
+          orientation="horizontal"
+        ></wa-divider>
+        <h3 id="color-picker" class="anchor-heading">
+          Color Picker
+          <a
+            id="color-picker-permalink"
+            href="#color-picker"
+            aria-labelledby="wa-tooltip-hlhMDU2Zh3Dt4qxNcULxK"
+          >
+            <wa-icon
+              name="hashtag"
+              label="Link to This Section"
+              role="img"
+              aria-label="Link to This Section"
+              library="default"
+              rotate="0"
+              style="--rotate-angle: 0deg"
+            ></wa-icon>
+          </a>
+        </h3>
+        <wa-tooltip
+          for="color-picker-permalink"
+          id="wa-tooltip-hlhMDU2Zh3Dt4qxNcULxK"
+          >Link to This Section</wa-tooltip
+        >
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>
+                  <a class="component-ref" href="/docs/components/color-picker"
+                    ><code>&lt;wa-color-picker&gt;</code></a
+                  >
+                </th>
+                <th><code>&lt;input type="color"&gt;</code></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><em>default</em></th>
+                <td>
+                  <wa-color-picker
+                    label="Color Picker"
+                    value="#ffa07a"
+                    size="m"
+                    placement="bottom-start"
+                  ></wa-color-picker>
+                </td>
+                <td>
+                  <label
+                    >Color Picker <input type="color" value="#ffa07a"
+                  /></label>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <wa-divider
+          role="separator"
+          aria-orientation="horizontal"
+          orientation="horizontal"
+        ></wa-divider>
+        <h3 id="details" class="anchor-heading">
+          Details
+          <a
+            id="details-permalink"
+            href="#details"
+            aria-labelledby="wa-tooltip-KgNu3u555Lp9CkqtsNBzK"
+          >
+            <wa-icon
+              name="hashtag"
+              label="Link to This Section"
+              role="img"
+              aria-label="Link to This Section"
+              library="default"
+              rotate="0"
+              style="--rotate-angle: 0deg"
+            ></wa-icon>
+          </a>
+        </h3>
+        <wa-tooltip
+          for="details-permalink"
+          id="wa-tooltip-KgNu3u555Lp9CkqtsNBzK"
+          >Link to This Section</wa-tooltip
+        >
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>
+                  <a class="component-ref" href="/docs/components/details"
+                    ><code>&lt;wa-details&gt;</code></a
+                  >
+                </th>
+                <th><code>&lt;details&gt;</code></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><em>default</em></th>
+                <td>
+                  <wa-details
+                    summary="Summary"
+                    appearance="outlined"
+                    icon-placement="end"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </wa-details>
+                </td>
+                <td>
+                  <details>
+                    <summary>Summary</summary>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                  </details>
+                </td>
+              </tr>
+              <tr>
+                <th><code>dir="rtl"</code></th>
+                <td>
+                  <wa-details
+                    summary="تبديلني"
+                    lang="ar"
+                    dir="rtl"
+                    appearance="outlined"
+                    icon-placement="end"
+                  >
+                    استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى
+                    حد ما- للأحرف عوضاً عن
+                  </wa-details>
+                </td>
+                <td>
+                  <details lang="ar" dir="rtl">
+                    <summary>تبديلني</summary>
+                    <p>
+                      استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى
+                      حد ما- للأحرف عوضاً عن
+                    </p>
+                  </details>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <wa-divider
+          role="separator"
+          aria-orientation="horizontal"
+          orientation="horizontal"
+        ></wa-divider>
+        <h3 id="input" class="anchor-heading">
+          Input
+          <a
+            id="input-permalink"
+            href="#input"
+            aria-labelledby="wa-tooltip-Ibmv-pxLmym1EBdPyDI5f"
+          >
+            <wa-icon
+              name="hashtag"
+              label="Link to This Section"
+              role="img"
+              aria-label="Link to This Section"
+              library="default"
+              rotate="0"
+              style="--rotate-angle: 0deg"
+            ></wa-icon>
+          </a>
+        </h3>
+        <wa-tooltip for="input-permalink" id="wa-tooltip-Ibmv-pxLmym1EBdPyDI5f"
+          >Link to This Section</wa-tooltip
+        >
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>
+                  <a class="component-ref" href="/docs/components/input"
+                    ><code>&lt;wa-input&gt;</code></a
+                  >
+                </th>
+                <th><code>&lt;input&gt;</code></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><em>default</em></th>
+                <td>
+                  <wa-input
+                    label="Input"
+                    placeholder="Placeholder"
+                    type="text"
+                    size="m"
+                    appearance="outlined"
+                  ></wa-input>
+                </td>
+                <td>
+                  <label
+                    >Input <input type="text" placeholder="Placeholder"
+                  /></label>
+                </td>
+              </tr>
+              <tr>
+                <th><code>type="password"</code></th>
+                <td>
+                  <wa-input
+                    label="Input (password)"
+                    type="password"
+                    size="m"
+                    appearance="outlined"
+                  ></wa-input>
+                </td>
+                <td>
+                  <label>Input (password) <input type="password" /></label>
+                </td>
+              </tr>
+              <tr>
+                <th><code>type="date"</code></th>
+                <td>
+                  <wa-input
+                    label="Input (date)"
+                    type="date"
+                    size="m"
+                    appearance="outlined"
+                  ></wa-input>
+                </td>
+                <td>
+                  <label>Input (date) <input type="date" /></label>
+                </td>
+              </tr>
+              <tr>
+                <th><code>type="time"</code></th>
+                <td>
+                  <wa-input
+                    label="Input (time)"
+                    type="time"
+                    size="m"
+                    appearance="outlined"
+                  ></wa-input>
+                </td>
+                <td>
+                  <label>Input (time) <input type="time" /></label>
+                </td>
+              </tr>
+              <tr>
+                <th><code>filled</code></th>
+                <td>
+                  <wa-input
+                    label="Input (filled)"
+                    placeholder="Placeholder"
+                    appearance="filled"
+                    type="text"
+                    size="m"
+                  ></wa-input>
+                </td>
+                <td>
+                  <label
+                    >Input (filled)
+                    <input
+                      type="text"
+                      placeholder="Placeholder"
+                      class="wa-filled"
+                  /></label>
+                </td>
+              </tr>
+              <tr>
+                <th><code>s</code></th>
+                <td>
+                  <wa-input
+                    label="Input (small)"
+                    placeholder="Placeholder"
+                    size="s"
+                    type="text"
+                    appearance="outlined"
+                  ></wa-input>
+                </td>
+                <td>
+                  <label class="wa-size-s"
+                    >Input (small) <input type="text" placeholder="Placeholder"
+                  /></label>
+                </td>
+              </tr>
+              <tr>
+                <th><code>m</code></th>
+                <td>
+                  <wa-input
+                    label="Input (medium)"
+                    placeholder="Placeholder"
+                    size="m"
+                    type="text"
+                    appearance="outlined"
+                  ></wa-input>
+                </td>
+                <td>
+                  <label class="wa-size-m"
+                    >Input (medium)
+                    <input type="text" placeholder="Placeholder"
+                  /></label>
+                </td>
+              </tr>
+              <tr>
+                <th><code>l</code></th>
+                <td>
+                  <wa-input
+                    label="Input (large)"
+                    placeholder="Placeholder"
+                    size="l"
+                    type="text"
+                    appearance="outlined"
+                  ></wa-input>
+                </td>
+                <td>
+                  <label class="wa-size-l"
+                    >Input (large) <input type="text" placeholder="Placeholder"
+                  /></label>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <wa-divider
+          role="separator"
+          aria-orientation="horizontal"
+          orientation="horizontal"
+        ></wa-divider>
+        <h3 id="progress-bar" class="anchor-heading">
+          Progress Bar
+          <a
+            id="progress-bar-permalink"
+            href="#progress-bar"
+            aria-labelledby="wa-tooltip-HopNTnFmmHmak5tcg3sRo"
+          >
+            <wa-icon
+              name="hashtag"
+              label="Link to This Section"
+              role="img"
+              aria-label="Link to This Section"
+              library="default"
+              rotate="0"
+              style="--rotate-angle: 0deg"
+            ></wa-icon>
+          </a>
+        </h3>
+        <wa-tooltip
+          for="progress-bar-permalink"
+          id="wa-tooltip-HopNTnFmmHmak5tcg3sRo"
+          >Link to This Section</wa-tooltip
+        >
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>
+                  <a class="component-ref" href="/docs/components/progress-bar"
+                    ><code>&lt;wa-progress-bar&gt;</code></a
+                  >
+                </th>
+                <th><code>&lt;progress&gt;</code></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><em>default</em></th>
+                <td>
+                  <wa-progress-bar
+                    value="50"
+                    max="100"
+                    style="--percentage: 50%"
+                  ></wa-progress-bar>
+                </td>
+                <td>
+                  <progress value="50" max="100"></progress>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <wa-divider
+          role="separator"
+          aria-orientation="horizontal"
+          orientation="horizontal"
+        ></wa-divider>
+        <h3 id="radio" class="anchor-heading">
+          Radio
+          <a
+            id="radio-permalink"
+            href="#radio"
+            aria-labelledby="wa-tooltip-EVCxoQ0JeM0jVUnaOpaCW"
+          >
+            <wa-icon
+              name="hashtag"
+              label="Link to This Section"
+              role="img"
+              aria-label="Link to This Section"
+              library="default"
+              rotate="0"
+              style="--rotate-angle: 0deg"
+            ></wa-icon>
+          </a>
+        </h3>
+        <wa-tooltip for="radio-permalink" id="wa-tooltip-EVCxoQ0JeM0jVUnaOpaCW"
+          >Link to This Section</wa-tooltip
+        >
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>
+                  <a class="component-ref" href="/docs/components/radio"
+                    ><code>&lt;wa-radio&gt;</code></a
+                  >
+                </th>
+                <th><code>&lt;input type="radio"&gt;</code></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><em>default</em></th>
+                <td>
+                  <wa-radio
+                    role="radio"
+                    tabindex="-1"
+                    aria-disabled="false"
+                    appearance="default"
+                    aria-checked="false"
+                    >Radio</wa-radio
+                  >
+                </td>
+                <td>
+                  <label><input type="radio" /> Radio</label>
+                </td>
+              </tr>
+              <tr>
+                <th><code>checked</code></th>
+                <td>
+                  <wa-radio-group value="1" orientation="vertical">
+                    <wa-radio
+                      value="1"
+                      role="radio"
+                      tabindex="0"
+                      aria-disabled="false"
+                      appearance="default"
+                      aria-checked="true"
+                      data-wa-radio-vertical=""
+                      data-wa-radio-first=""
+                      data-wa-radio-last=""
+                      >Radio</wa-radio
+                    >
+                  </wa-radio-group>
+                </td>
+                <td>
+                  <label><input type="radio" checked="" /> Radio</label>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <wa-divider
+          role="separator"
+          aria-orientation="horizontal"
+          orientation="horizontal"
+        ></wa-divider>
+        <h3 id="select" class="anchor-heading">
+          Select
+          <a
+            id="select-permalink"
+            href="#select"
+            aria-labelledby="wa-tooltip-8XNxRBfSC01PcPgcfuqsL"
+          >
+            <wa-icon
+              name="hashtag"
+              label="Link to This Section"
+              role="img"
+              aria-label="Link to This Section"
+              library="default"
+              rotate="0"
+              style="--rotate-angle: 0deg"
+            ></wa-icon>
+          </a>
+        </h3>
+        <wa-tooltip for="select-permalink" id="wa-tooltip-8XNxRBfSC01PcPgcfuqsL"
+          >Link to This Section</wa-tooltip
+        >
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>
+                  <a class="component-ref" href="/docs/components/select"
+                    ><code>&lt;wa-select&gt;</code></a
+                  >
+                </th>
+                <th><code>&lt;select&gt;</code></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><em>default</em></th>
+                <td>
+                  <wa-select
+                    label="Select"
+                    value="1"
+                    name=""
+                    size="m"
+                    appearance="outlined"
+                    placement="bottom"
+                  >
+                    <wa-option
+                      value="1"
+                      role="option"
+                      aria-selected="true"
+                      aria-disabled="false"
+                      >Option</wa-option
+                    >
+                  </wa-select>
+                </td>
+                <td>
+                  <label
+                    >Select
+                    <select value="1">
+                      <option value="1">Option</option>
+                    </select>
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <th><code>filled</code></th>
+                <td>
+                  <wa-select
+                    label="Select (filled)"
+                    value="1"
+                    appearance="filled"
+                    name=""
+                    size="m"
+                    placement="bottom"
+                  >
+                    <wa-option
+                      value="1"
+                      role="option"
+                      aria-selected="true"
+                      aria-disabled="false"
+                      >Option</wa-option
+                    >
+                  </wa-select>
+                </td>
+                <td>
+                  <label
+                    >Select (filled)
+                    <select class="wa-filled" value="1">
+                      <option value="1">Option</option>
+                    </select>
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <th><code>s</code></th>
+                <td>
+                  <wa-select
+                    label="Select (small)"
+                    value="1"
+                    size="s"
+                    name=""
+                    appearance="outlined"
+                    placement="bottom"
+                  >
+                    <wa-option
+                      value="1"
+                      role="option"
+                      aria-selected="true"
+                      aria-disabled="false"
+                      >Option</wa-option
+                    >
+                  </wa-select>
+                </td>
+                <td>
+                  <label class="wa-size-s"
+                    >Select (small)
+                    <select value="1">
+                      <option value="1">Option</option>
+                    </select>
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <th><code>m</code></th>
+                <td>
+                  <wa-select
+                    label="Select (medium)"
+                    value="1"
+                    size="m"
+                    name=""
+                    appearance="outlined"
+                    placement="bottom"
+                  >
+                    <wa-option
+                      value="1"
+                      role="option"
+                      aria-selected="true"
+                      aria-disabled="false"
+                      >Option</wa-option
+                    >
+                  </wa-select>
+                </td>
+                <td>
+                  <label class="wa-size-m"
+                    >Select (medium)
+                    <select value="1">
+                      <option value="1">Option</option>
+                    </select>
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <th><code>l</code></th>
+                <td>
+                  <wa-select
+                    label="Select (large)"
+                    value="1"
+                    size="l"
+                    name=""
+                    appearance="outlined"
+                    placement="bottom"
+                  >
+                    <wa-option
+                      value="1"
+                      role="option"
+                      aria-selected="true"
+                      aria-disabled="false"
+                      >Option</wa-option
+                    >
+                  </wa-select>
+                </td>
+                <td>
+                  <label class="wa-size-l"
+                    >Select (large)
+                    <select value="1">
+                      <option value="1">Option</option>
+                    </select>
+                  </label>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <wa-divider
+          role="separator"
+          aria-orientation="horizontal"
+          orientation="horizontal"
+        ></wa-divider>
+        <h3 id="slider" class="anchor-heading">
+          Slider
+          <a
+            id="slider-permalink"
+            href="#slider"
+            aria-labelledby="wa-tooltip--WXczCNartIGmezgPiBk3"
+          >
+            <wa-icon
+              name="hashtag"
+              label="Link to This Section"
+              role="img"
+              aria-label="Link to This Section"
+              library="default"
+              rotate="0"
+              style="--rotate-angle: 0deg"
+            ></wa-icon>
+          </a>
+        </h3>
+        <wa-tooltip for="slider-permalink" id="wa-tooltip--WXczCNartIGmezgPiBk3"
+          >Link to This Section</wa-tooltip
+        >
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>
+                  <a class="component-ref" href="/docs/components/slider"
+                    ><code>&lt;wa-slider&gt;</code></a
+                  >
+                </th>
+                <th><code>&lt;input type="range"&gt;</code></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><em>default</em></th>
+                <td>
+                  <wa-slider
+                    label="Slider"
+                    value="0"
+                    orientation="horizontal"
+                    size="m"
+                    tooltip-placement="top"
+                  ></wa-slider>
+                </td>
+                <td>
+                  <label>Slider <input type="range" /></label>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <wa-divider
+          role="separator"
+          aria-orientation="horizontal"
+          orientation="horizontal"
+        ></wa-divider>
+        <h3 id="textarea" class="anchor-heading">
+          Textarea
+          <a
+            id="textarea-permalink"
+            href="#textarea"
+            aria-labelledby="wa-tooltip-hszaRjrKHAVauD8JyWE3_"
+          >
+            <wa-icon
+              name="hashtag"
+              label="Link to This Section"
+              role="img"
+              aria-label="Link to This Section"
+              library="default"
+              rotate="0"
+              style="--rotate-angle: 0deg"
+            ></wa-icon>
+          </a>
+        </h3>
+        <wa-tooltip
+          for="textarea-permalink"
+          id="wa-tooltip-hszaRjrKHAVauD8JyWE3_"
+          >Link to This Section</wa-tooltip
+        >
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>
+                  <a class="component-ref" href="/docs/components/textarea"
+                    ><code>&lt;wa-textarea&gt;</code></a
+                  >
+                </th>
+                <th><code>&lt;textarea&gt;</code></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><em>default</em></th>
+                <td>
+                  <wa-textarea
+                    label="Textarea"
+                    placeholder="Placeholder"
+                    rows="2"
+                    value=""
+                    size="m"
+                    appearance="outlined"
+                    resize="vertical"
+                  ></wa-textarea>
+                </td>
+                <td>
+                  <label
+                    >Textarea
+                    <textarea placeholder="Placeholder" rows="2"></textarea>
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <th><code>filled</code></th>
+                <td>
+                  <wa-textarea
+                    label="Textarea (filled)"
+                    placeholder="Placeholder"
+                    appearance="filled"
+                    rows="2"
+                    value=""
+                    size="m"
+                    resize="vertical"
+                  ></wa-textarea>
+                </td>
+                <td>
+                  <label
+                    >Textarea (filled)
+                    <textarea
+                      placeholder="Placeholder"
+                      class="wa-filled"
+                      rows="2"
+                    ></textarea>
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <th><code>s</code></th>
+                <td>
+                  <wa-textarea
+                    label="Textarea (small)"
+                    placeholder="Placeholder"
+                    size="s"
+                    rows="2"
+                    value=""
+                    appearance="outlined"
+                    resize="vertical"
+                  ></wa-textarea>
+                </td>
+                <td>
+                  <label class="wa-size-s"
+                    >Textarea (small)
+                    <textarea placeholder="Placeholder" rows="2"></textarea>
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <th><code>m</code></th>
+                <td>
+                  <wa-textarea
+                    label="Textarea (medium)"
+                    placeholder="Placeholder"
+                    size="m"
+                    rows="2"
+                    value=""
+                    appearance="outlined"
+                    resize="vertical"
+                  ></wa-textarea>
+                </td>
+                <td>
+                  <label class="wa-size-m"
+                    >Textarea (medium)
+                    <textarea placeholder="Placeholder" rows="2"></textarea>
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <th><code>l</code></th>
+                <td>
+                  <wa-textarea
+                    label="Textarea (large)"
+                    placeholder="Placeholder"
+                    size="l"
+                    rows="2"
+                    value=""
+                    appearance="outlined"
+                    resize="vertical"
+                  ></wa-textarea>
+                </td>
+                <td>
+                  <label class="wa-size-l"
+                    >Textarea (large)
+                    <textarea placeholder="Placeholder" rows="2"></textarea>
+                  </label>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="size" class="anchor-heading">
+          Size
+          <a
+            id="size-permalink"
+            href="#size"
+            aria-labelledby="wa-tooltip-t2JbECdgF6z3dqpYIxhtP"
+          >
+            <wa-icon
+              name="hashtag"
+              label="Link to This Section"
+              role="img"
+              aria-label="Link to This Section"
+              library="default"
+              rotate="0"
+              style="--rotate-angle: 0deg"
+            ></wa-icon>
+          </a>
+        </h2>
+        <wa-tooltip for="size-permalink" id="wa-tooltip-t2JbECdgF6z3dqpYIxhtP"
+          >Link to This Section</wa-tooltip
+        >
+        <p>
+          Size tests ensure that both the <code>size</code> attribute and
+          <code>.wa-size-[xs|s|m|l|xl]</code> classes have identical results for
+          components that support them. Developers should be able to use both of
+          these interchangeably on components to get the intended size.
+        </p>
+        <h3 id="button-3" class="anchor-heading">
+          Button
+          <a
+            id="button-3-permalink"
+            href="#button-3"
+            aria-labelledby="wa-tooltip-Nmq9hvSWJqRUTsG3IsMJZ"
+          >
+            <wa-icon
+              name="hashtag"
+              label="Link to This Section"
+              role="img"
+              aria-label="Link to This Section"
+              library="default"
+              rotate="0"
+              style="--rotate-angle: 0deg"
+            ></wa-icon>
+          </a>
+        </h3>
+        <wa-tooltip
+          for="button-3-permalink"
+          id="wa-tooltip-Nmq9hvSWJqRUTsG3IsMJZ"
+          >Link to This Section</wa-tooltip
+        >
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th><code>size=""</code></th>
+                <th><code>.wa-size-[xs|s|m|l|xl]</code></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><code>xs</code></th>
+                <td>
+                  <wa-button size="xs" variant="neutral" appearance="accent"
+                    >Button</wa-button
+                  >
+                </td>
+                <td>
+                  <wa-button
+                    class="wa-size-xs"
+                    variant="neutral"
+                    appearance="accent"
+                    size="m"
+                    >Button</wa-button
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th><code>s</code></th>
+                <td>
+                  <wa-button size="s" variant="neutral" appearance="accent"
+                    >Button</wa-button
+                  >
+                </td>
+                <td>
+                  <wa-button
+                    class="wa-size-s"
+                    variant="neutral"
+                    appearance="accent"
+                    size="m"
+                    >Button</wa-button
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th><code>m</code></th>
+                <td>
+                  <wa-button size="m" variant="neutral" appearance="accent"
+                    >Button</wa-button
+                  >
+                </td>
+                <td>
+                  <wa-button
+                    class="wa-size-m"
+                    variant="neutral"
+                    appearance="accent"
+                    size="m"
+                    >Button</wa-button
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th><code>l</code></th>
+                <td>
+                  <wa-button size="l" variant="neutral" appearance="accent"
+                    >Button</wa-button
+                  >
+                </td>
+                <td>
+                  <wa-button
+                    class="wa-size-l"
+                    variant="neutral"
+                    appearance="accent"
+                    size="m"
+                    >Button</wa-button
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th><code>xl</code></th>
+                <td>
+                  <wa-button size="xl" variant="neutral" appearance="accent"
+                    >Button</wa-button
+                  >
+                </td>
+                <td>
+                  <wa-button
+                    class="wa-size-xl"
+                    variant="neutral"
+                    appearance="accent"
+                    size="m"
+                    >Button</wa-button
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <wa-divider
+          role="separator"
+          aria-orientation="horizontal"
+          orientation="horizontal"
+        ></wa-divider>
+        <h3 id="callout-2" class="anchor-heading">
+          Callout
+          <a
+            id="callout-2-permalink"
+            href="#callout-2"
+            aria-labelledby="wa-tooltip-GL-BlzUDz_iCT0ghGP5vQ"
+          >
+            <wa-icon
+              name="hashtag"
+              label="Link to This Section"
+              role="img"
+              aria-label="Link to This Section"
+              library="default"
+              rotate="0"
+              style="--rotate-angle: 0deg"
+            ></wa-icon>
+          </a>
+        </h3>
+        <wa-tooltip
+          for="callout-2-permalink"
+          id="wa-tooltip-GL-BlzUDz_iCT0ghGP5vQ"
+          >Link to This Section</wa-tooltip
+        >
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th><code>size=""</code></th>
+                <th><code>.wa-size-[xs|s|m|l|xl]</code></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><code>xs</code></th>
+                <td>
+                  <wa-callout size="xs" variant="brand">
+                    <wa-icon
+                      slot="icon"
+                      name="circle-star"
+                      aria-hidden="true"
+                      library="default"
+                      rotate="0"
+                      style="--rotate-angle: 0deg"
+                    ></wa-icon>
+                    Callout
+                  </wa-callout>
+                </td>
+                <td>
+                  <wa-callout class="wa-size-xs" variant="brand" size="m">
+                    <wa-icon
+                      slot="icon"
+                      name="circle-star"
+                      aria-hidden="true"
+                      library="default"
+                      rotate="0"
+                      style="--rotate-angle: 0deg"
+                    ></wa-icon>
+                    Callout
+                  </wa-callout>
+                </td>
+              </tr>
+              <tr>
+                <th><code>s</code></th>
+                <td>
+                  <wa-callout size="s" variant="brand">
+                    <wa-icon
+                      slot="icon"
+                      name="circle-star"
+                      aria-hidden="true"
+                      library="default"
+                      rotate="0"
+                      style="--rotate-angle: 0deg"
+                    ></wa-icon>
+                    Callout
+                  </wa-callout>
+                </td>
+                <td>
+                  <wa-callout class="wa-size-s" variant="brand" size="m">
+                    <wa-icon
+                      slot="icon"
+                      name="circle-star"
+                      aria-hidden="true"
+                      library="default"
+                      rotate="0"
+                      style="--rotate-angle: 0deg"
+                    ></wa-icon>
+                    Callout
+                  </wa-callout>
+                </td>
+              </tr>
+              <tr>
+                <th><code>m</code></th>
+                <td>
+                  <wa-callout size="m" variant="brand">
+                    <wa-icon
+                      slot="icon"
+                      name="circle-star"
+                      aria-hidden="true"
+                      library="default"
+                      rotate="0"
+                      style="--rotate-angle: 0deg"
+                    ></wa-icon>
+                    Callout
+                  </wa-callout>
+                </td>
+                <td>
+                  <wa-callout class="wa-size-m" variant="brand" size="m">
+                    <wa-icon
+                      slot="icon"
+                      name="circle-star"
+                      aria-hidden="true"
+                      library="default"
+                      rotate="0"
+                      style="--rotate-angle: 0deg"
+                    ></wa-icon>
+                    Callout
+                  </wa-callout>
+                </td>
+              </tr>
+              <tr>
+                <th><code>l</code></th>
+                <td>
+                  <wa-callout size="l" variant="brand">
+                    <wa-icon
+                      slot="icon"
+                      name="circle-star"
+                      aria-hidden="true"
+                      library="default"
+                      rotate="0"
+                      style="--rotate-angle: 0deg"
+                    ></wa-icon>
+                    Callout
+                  </wa-callout>
+                </td>
+                <td>
+                  <wa-callout class="wa-size-l" variant="brand" size="m">
+                    <wa-icon
+                      slot="icon"
+                      name="circle-star"
+                      aria-hidden="true"
+                      library="default"
+                      rotate="0"
+                      style="--rotate-angle: 0deg"
+                    ></wa-icon>
+                    Callout
+                  </wa-callout>
+                </td>
+              </tr>
+              <tr>
+                <th><code>xl</code></th>
+                <td>
+                  <wa-callout size="xl" variant="brand">
+                    <wa-icon
+                      slot="icon"
+                      name="circle-star"
+                      aria-hidden="true"
+                      library="default"
+                      rotate="0"
+                      style="--rotate-angle: 0deg"
+                    ></wa-icon>
+                    Callout
+                  </wa-callout>
+                </td>
+                <td>
+                  <wa-callout class="wa-size-xl" variant="brand" size="m">
+                    <wa-icon
+                      slot="icon"
+                      name="circle-star"
+                      aria-hidden="true"
+                      library="default"
+                      rotate="0"
+                      style="--rotate-angle: 0deg"
+                    ></wa-icon>
+                    Callout
+                  </wa-callout>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <wa-divider
+          role="separator"
+          aria-orientation="horizontal"
+          orientation="horizontal"
+        ></wa-divider>
+        <h3 id="checkbox-2" class="anchor-heading">
+          Checkbox
+          <a
+            id="checkbox-2-permalink"
+            href="#checkbox-2"
+            aria-labelledby="wa-tooltip-xXuxJ8DMcZP16y-Fwhduw"
+          >
+            <wa-icon
+              name="hashtag"
+              label="Link to This Section"
+              role="img"
+              aria-label="Link to This Section"
+              library="default"
+              rotate="0"
+              style="--rotate-angle: 0deg"
+            ></wa-icon>
+          </a>
+        </h3>
+        <wa-tooltip
+          for="checkbox-2-permalink"
+          id="wa-tooltip-xXuxJ8DMcZP16y-Fwhduw"
+          >Link to This Section</wa-tooltip
+        >
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th><code>size=""</code></th>
+                <th><code>.wa-size-[xs|s|m|l|xl]</code></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><code>xs</code></th>
+                <td>
+                  <wa-checkbox hint="Hint" size="xs" value="on"
+                    >Checkbox</wa-checkbox
+                  >
+                </td>
+                <td>
+                  <wa-checkbox
+                    hint="Hint"
+                    class="wa-size-xs"
+                    size="m"
+                    value="on"
+                    >Checkbox</wa-checkbox
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th><code>s</code></th>
+                <td>
+                  <wa-checkbox hint="Hint" size="s" value="on"
+                    >Checkbox</wa-checkbox
+                  >
+                </td>
+                <td>
+                  <wa-checkbox hint="Hint" class="wa-size-s" size="m" value="on"
+                    >Checkbox</wa-checkbox
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th><code>m</code></th>
+                <td>
+                  <wa-checkbox hint="Hint" size="m" value="on"
+                    >Checkbox</wa-checkbox
+                  >
+                </td>
+                <td>
+                  <wa-checkbox hint="Hint" class="wa-size-m" size="m" value="on"
+                    >Checkbox</wa-checkbox
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th><code>l</code></th>
+                <td>
+                  <wa-checkbox hint="Hint" size="l" value="on"
+                    >Checkbox</wa-checkbox
+                  >
+                </td>
+                <td>
+                  <wa-checkbox hint="Hint" class="wa-size-l" size="m" value="on"
+                    >Checkbox</wa-checkbox
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th><code>xl</code></th>
+                <td>
+                  <wa-checkbox hint="Hint" size="xl" value="on"
+                    >Checkbox</wa-checkbox
+                  >
+                </td>
+                <td>
+                  <wa-checkbox
+                    hint="Hint"
+                    class="wa-size-xl"
+                    size="m"
+                    value="on"
+                    >Checkbox</wa-checkbox
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <wa-divider
+          role="separator"
+          aria-orientation="horizontal"
+          orientation="horizontal"
+        ></wa-divider>
+        <h3 id="color-picker-2" class="anchor-heading">
+          Color Picker
+          <a
+            id="color-picker-2-permalink"
+            href="#color-picker-2"
+            aria-labelledby="wa-tooltip-i_6bt8Vp8sDJgM7jnXKix"
+          >
+            <wa-icon
+              name="hashtag"
+              label="Link to This Section"
+              role="img"
+              aria-label="Link to This Section"
+              library="default"
+              rotate="0"
+              style="--rotate-angle: 0deg"
+            ></wa-icon>
+          </a>
+        </h3>
+        <wa-tooltip
+          for="color-picker-2-permalink"
+          id="wa-tooltip-i_6bt8Vp8sDJgM7jnXKix"
+          >Link to This Section</wa-tooltip
+        >
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th><code>size=""</code></th>
+                <th><code>.wa-size-[xs|s|m|l|xl]</code></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><code>xs</code></th>
+                <td>
+                  <wa-color-picker
+                    size="xs"
+                    label="Color Picker"
+                    hint="Hint"
+                    placement="bottom-start"
+                  ></wa-color-picker>
+                </td>
+                <td>
+                  <wa-color-picker
+                    class="wa-size-xs"
+                    label="Color Picker"
+                    hint="Hint"
+                    size="m"
+                    placement="bottom-start"
+                  ></wa-color-picker>
+                </td>
+              </tr>
+              <tr>
+                <th><code>s</code></th>
+                <td>
+                  <wa-color-picker
+                    size="s"
+                    label="Color Picker"
+                    hint="Hint"
+                    placement="bottom-start"
+                  ></wa-color-picker>
+                </td>
+                <td>
+                  <wa-color-picker
+                    class="wa-size-s"
+                    label="Color Picker"
+                    hint="Hint"
+                    size="m"
+                    placement="bottom-start"
+                  ></wa-color-picker>
+                </td>
+              </tr>
+              <tr>
+                <th><code>m</code></th>
+                <td>
+                  <wa-color-picker
+                    size="m"
+                    label="Color Picker"
+                    hint="Hint"
+                    placement="bottom-start"
+                  ></wa-color-picker>
+                </td>
+                <td>
+                  <wa-color-picker
+                    class="wa-size-m"
+                    label="Color Picker"
+                    hint="Hint"
+                    size="m"
+                    placement="bottom-start"
+                  ></wa-color-picker>
+                </td>
+              </tr>
+              <tr>
+                <th><code>l</code></th>
+                <td>
+                  <wa-color-picker
+                    size="l"
+                    label="Color Picker"
+                    hint="Hint"
+                    placement="bottom-start"
+                  ></wa-color-picker>
+                </td>
+                <td>
+                  <wa-color-picker
+                    class="wa-size-l"
+                    label="Color Picker"
+                    hint="Hint"
+                    size="m"
+                    placement="bottom-start"
+                  ></wa-color-picker>
+                </td>
+              </tr>
+              <tr>
+                <th><code>xl</code></th>
+                <td>
+                  <wa-color-picker
+                    size="xl"
+                    label="Color Picker"
+                    hint="Hint"
+                    placement="bottom-start"
+                  ></wa-color-picker>
+                </td>
+                <td>
+                  <wa-color-picker
+                    class="wa-size-xl"
+                    label="Color Picker"
+                    hint="Hint"
+                    size="m"
+                    placement="bottom-start"
+                  ></wa-color-picker>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <wa-divider
+          role="separator"
+          aria-orientation="horizontal"
+          orientation="horizontal"
+        ></wa-divider>
+        <h3 id="dropdown" class="anchor-heading">
+          Dropdown
+          <a
+            id="dropdown-permalink"
+            href="#dropdown"
+            aria-labelledby="wa-tooltip-fZcijlRx3rREJpE5yn2Pi"
+          >
+            <wa-icon
+              name="hashtag"
+              label="Link to This Section"
+              role="img"
+              aria-label="Link to This Section"
+              library="default"
+              rotate="0"
+              style="--rotate-angle: 0deg"
+            ></wa-icon>
+          </a>
+        </h3>
+        <wa-tooltip
+          for="dropdown-permalink"
+          id="wa-tooltip-fZcijlRx3rREJpE5yn2Pi"
+          >Link to This Section</wa-tooltip
+        >
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th><code>size=""</code></th>
+                <th><code>.wa-size-[xs|s|m|l|xl]</code></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><code>xs</code></th>
+                <td>
+                  <wa-dropdown size="xs" placement="bottom-start">
+                    <wa-button
+                      slot="trigger"
+                      with-caret=""
+                      size="xs"
+                      variant="neutral"
+                      appearance="accent"
+                      >Dropdown</wa-button
+                    >
+                    <wa-dropdown-item
+                      variant="default"
+                      size="xs"
+                      type="normal"
+                      tabindex="0"
+                      aria-disabled="false"
+                      role="menuitem"
+                      >Menu Item 1</wa-dropdown-item
+                    >
+                    <wa-dropdown-item
+                      variant="default"
+                      size="xs"
+                      type="normal"
+                      tabindex="-1"
+                      aria-disabled="false"
+                      role="menuitem"
+                      >Menu Item 2</wa-dropdown-item
+                    >
+                  </wa-dropdown>
+                </td>
+                <td>
+                  <wa-dropdown
+                    class="wa-size-xs"
+                    size="m"
+                    placement="bottom-start"
+                  >
+                    <wa-button
+                      slot="trigger"
+                      with-caret=""
+                      class="wa-size-xs"
+                      variant="neutral"
+                      appearance="accent"
+                      size="m"
+                      >Dropdown</wa-button
+                    >
+                    <wa-dropdown-item
+                      variant="default"
+                      size="m"
+                      type="normal"
+                      tabindex="0"
+                      aria-disabled="false"
+                      role="menuitem"
+                      >Menu Item 1</wa-dropdown-item
+                    >
+                    <wa-dropdown-item
+                      variant="default"
+                      size="m"
+                      type="normal"
+                      tabindex="-1"
+                      aria-disabled="false"
+                      role="menuitem"
+                      >Menu Item 2</wa-dropdown-item
+                    >
+                  </wa-dropdown>
+                </td>
+              </tr>
+              <tr>
+                <th><code>s</code></th>
+                <td>
+                  <wa-dropdown size="s" placement="bottom-start">
+                    <wa-button
+                      slot="trigger"
+                      with-caret=""
+                      size="s"
+                      variant="neutral"
+                      appearance="accent"
+                      >Dropdown</wa-button
+                    >
+                    <wa-dropdown-item
+                      variant="default"
+                      size="s"
+                      type="normal"
+                      tabindex="0"
+                      aria-disabled="false"
+                      role="menuitem"
+                      >Menu Item 1</wa-dropdown-item
+                    >
+                    <wa-dropdown-item
+                      variant="default"
+                      size="s"
+                      type="normal"
+                      tabindex="-1"
+                      aria-disabled="false"
+                      role="menuitem"
+                      >Menu Item 2</wa-dropdown-item
+                    >
+                  </wa-dropdown>
+                </td>
+                <td>
+                  <wa-dropdown
+                    class="wa-size-s"
+                    size="m"
+                    placement="bottom-start"
+                  >
+                    <wa-button
+                      slot="trigger"
+                      with-caret=""
+                      class="wa-size-s"
+                      variant="neutral"
+                      appearance="accent"
+                      size="m"
+                      >Dropdown</wa-button
+                    >
+                    <wa-dropdown-item
+                      variant="default"
+                      size="m"
+                      type="normal"
+                      tabindex="0"
+                      aria-disabled="false"
+                      role="menuitem"
+                      >Menu Item 1</wa-dropdown-item
+                    >
+                    <wa-dropdown-item
+                      variant="default"
+                      size="m"
+                      type="normal"
+                      tabindex="-1"
+                      aria-disabled="false"
+                      role="menuitem"
+                      >Menu Item 2</wa-dropdown-item
+                    >
+                  </wa-dropdown>
+                </td>
+              </tr>
+              <tr>
+                <th><code>m</code></th>
+                <td>
+                  <wa-dropdown size="m" placement="bottom-start">
+                    <wa-button
+                      slot="trigger"
+                      with-caret=""
+                      size="m"
+                      variant="neutral"
+                      appearance="accent"
+                      >Dropdown</wa-button
+                    >
+                    <wa-dropdown-item
+                      variant="default"
+                      size="m"
+                      type="normal"
+                      tabindex="0"
+                      aria-disabled="false"
+                      role="menuitem"
+                      >Menu Item 1</wa-dropdown-item
+                    >
+                    <wa-dropdown-item
+                      variant="default"
+                      size="m"
+                      type="normal"
+                      tabindex="-1"
+                      aria-disabled="false"
+                      role="menuitem"
+                      >Menu Item 2</wa-dropdown-item
+                    >
+                  </wa-dropdown>
+                </td>
+                <td>
+                  <wa-dropdown
+                    class="wa-size-m"
+                    size="m"
+                    placement="bottom-start"
+                  >
+                    <wa-button
+                      slot="trigger"
+                      with-caret=""
+                      class="wa-size-m"
+                      variant="neutral"
+                      appearance="accent"
+                      size="m"
+                      >Dropdown</wa-button
+                    >
+                    <wa-dropdown-item
+                      variant="default"
+                      size="m"
+                      type="normal"
+                      tabindex="0"
+                      aria-disabled="false"
+                      role="menuitem"
+                      >Menu Item 1</wa-dropdown-item
+                    >
+                    <wa-dropdown-item
+                      variant="default"
+                      size="m"
+                      type="normal"
+                      tabindex="-1"
+                      aria-disabled="false"
+                      role="menuitem"
+                      >Menu Item 2</wa-dropdown-item
+                    >
+                  </wa-dropdown>
+                </td>
+              </tr>
+              <tr>
+                <th><code>l</code></th>
+                <td>
+                  <wa-dropdown size="l" placement="bottom-start">
+                    <wa-button
+                      slot="trigger"
+                      with-caret=""
+                      size="l"
+                      variant="neutral"
+                      appearance="accent"
+                      >Dropdown</wa-button
+                    >
+                    <wa-dropdown-item
+                      variant="default"
+                      size="l"
+                      type="normal"
+                      tabindex="0"
+                      aria-disabled="false"
+                      role="menuitem"
+                      >Menu Item 1</wa-dropdown-item
+                    >
+                    <wa-dropdown-item
+                      variant="default"
+                      size="l"
+                      type="normal"
+                      tabindex="-1"
+                      aria-disabled="false"
+                      role="menuitem"
+                      >Menu Item 2</wa-dropdown-item
+                    >
+                  </wa-dropdown>
+                </td>
+                <td>
+                  <wa-dropdown
+                    class="wa-size-l"
+                    size="m"
+                    placement="bottom-start"
+                  >
+                    <wa-button
+                      slot="trigger"
+                      with-caret=""
+                      class="wa-size-l"
+                      variant="neutral"
+                      appearance="accent"
+                      size="m"
+                      >Dropdown</wa-button
+                    >
+                    <wa-dropdown-item
+                      variant="default"
+                      size="m"
+                      type="normal"
+                      tabindex="0"
+                      aria-disabled="false"
+                      role="menuitem"
+                      >Menu Item 1</wa-dropdown-item
+                    >
+                    <wa-dropdown-item
+                      variant="default"
+                      size="m"
+                      type="normal"
+                      tabindex="-1"
+                      aria-disabled="false"
+                      role="menuitem"
+                      >Menu Item 2</wa-dropdown-item
+                    >
+                  </wa-dropdown>
+                </td>
+              </tr>
+              <tr>
+                <th><code>xl</code></th>
+                <td>
+                  <wa-dropdown size="xl" placement="bottom-start">
+                    <wa-button
+                      slot="trigger"
+                      with-caret=""
+                      size="xl"
+                      variant="neutral"
+                      appearance="accent"
+                      >Dropdown</wa-button
+                    >
+                    <wa-dropdown-item
+                      variant="default"
+                      size="xl"
+                      type="normal"
+                      tabindex="0"
+                      aria-disabled="false"
+                      role="menuitem"
+                      >Menu Item 1</wa-dropdown-item
+                    >
+                    <wa-dropdown-item
+                      variant="default"
+                      size="xl"
+                      type="normal"
+                      tabindex="-1"
+                      aria-disabled="false"
+                      role="menuitem"
+                      >Menu Item 2</wa-dropdown-item
+                    >
+                  </wa-dropdown>
+                </td>
+                <td>
+                  <wa-dropdown
+                    class="wa-size-xl"
+                    size="m"
+                    placement="bottom-start"
+                  >
+                    <wa-button
+                      slot="trigger"
+                      with-caret=""
+                      class="wa-size-xl"
+                      variant="neutral"
+                      appearance="accent"
+                      size="m"
+                      >Dropdown</wa-button
+                    >
+                    <wa-dropdown-item
+                      variant="default"
+                      size="m"
+                      type="normal"
+                      tabindex="0"
+                      aria-disabled="false"
+                      role="menuitem"
+                      >Menu Item 1</wa-dropdown-item
+                    >
+                    <wa-dropdown-item
+                      variant="default"
+                      size="m"
+                      type="normal"
+                      tabindex="-1"
+                      aria-disabled="false"
+                      role="menuitem"
+                      >Menu Item 2</wa-dropdown-item
+                    >
+                  </wa-dropdown>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <wa-divider
+          role="separator"
+          aria-orientation="horizontal"
+          orientation="horizontal"
+        ></wa-divider>
+        <h3 id="input-2" class="anchor-heading">
+          Input
+          <a
+            id="input-2-permalink"
+            href="#input-2"
+            aria-labelledby="wa-tooltip-r6Yqz01v6PDPekZqclrrG"
+          >
+            <wa-icon
+              name="hashtag"
+              label="Link to This Section"
+              role="img"
+              aria-label="Link to This Section"
+              library="default"
+              rotate="0"
+              style="--rotate-angle: 0deg"
+            ></wa-icon>
+          </a>
+        </h3>
+        <wa-tooltip
+          for="input-2-permalink"
+          id="wa-tooltip-r6Yqz01v6PDPekZqclrrG"
+          >Link to This Section</wa-tooltip
+        >
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th><code>size=""</code></th>
+                <th><code>.wa-size-[xs|s|m|l|xl]</code></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><code>xs</code></th>
+                <td>
+                  <wa-input
+                    size="xs"
+                    label="Input"
+                    placeholder="Placeholder"
+                    hint="Hint"
+                    type="text"
+                    appearance="outlined"
+                  ></wa-input>
+                </td>
+                <td>
+                  <wa-input
+                    class="wa-size-xs"
+                    label="Input"
+                    placeholder="Placeholder"
+                    hint="Hint"
+                    type="text"
+                    size="m"
+                    appearance="outlined"
+                  ></wa-input>
+                </td>
+              </tr>
+              <tr>
+                <th><code>s</code></th>
+                <td>
+                  <wa-input
+                    size="s"
+                    label="Input"
+                    placeholder="Placeholder"
+                    hint="Hint"
+                    type="text"
+                    appearance="outlined"
+                  ></wa-input>
+                </td>
+                <td>
+                  <wa-input
+                    class="wa-size-s"
+                    label="Input"
+                    placeholder="Placeholder"
+                    hint="Hint"
+                    type="text"
+                    size="m"
+                    appearance="outlined"
+                  ></wa-input>
+                </td>
+              </tr>
+              <tr>
+                <th><code>m</code></th>
+                <td>
+                  <wa-input
+                    size="m"
+                    label="Input"
+                    placeholder="Placeholder"
+                    hint="Hint"
+                    type="text"
+                    appearance="outlined"
+                  ></wa-input>
+                </td>
+                <td>
+                  <wa-input
+                    class="wa-size-m"
+                    label="Input"
+                    placeholder="Placeholder"
+                    hint="Hint"
+                    type="text"
+                    size="m"
+                    appearance="outlined"
+                  ></wa-input>
+                </td>
+              </tr>
+              <tr>
+                <th><code>l</code></th>
+                <td>
+                  <wa-input
+                    size="l"
+                    label="Input"
+                    placeholder="Placeholder"
+                    hint="Hint"
+                    type="text"
+                    appearance="outlined"
+                  ></wa-input>
+                </td>
+                <td>
+                  <wa-input
+                    class="wa-size-l"
+                    label="Input"
+                    placeholder="Placeholder"
+                    hint="Hint"
+                    type="text"
+                    size="m"
+                    appearance="outlined"
+                  ></wa-input>
+                </td>
+              </tr>
+              <tr>
+                <th><code>xl</code></th>
+                <td>
+                  <wa-input
+                    size="xl"
+                    label="Input"
+                    placeholder="Placeholder"
+                    hint="Hint"
+                    type="text"
+                    appearance="outlined"
+                  ></wa-input>
+                </td>
+                <td>
+                  <wa-input
+                    class="wa-size-xl"
+                    label="Input"
+                    placeholder="Placeholder"
+                    hint="Hint"
+                    type="text"
+                    size="m"
+                    appearance="outlined"
+                  ></wa-input>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <wa-divider
+          role="separator"
+          aria-orientation="horizontal"
+          orientation="horizontal"
+        ></wa-divider>
+        <h3 id="radio-2" class="anchor-heading">
+          Radio
+          <a
+            id="radio-2-permalink"
+            href="#radio-2"
+            aria-labelledby="wa-tooltip-xH599UH2cchd1HTwXCZ_n"
+          >
+            <wa-icon
+              name="hashtag"
+              label="Link to This Section"
+              role="img"
+              aria-label="Link to This Section"
+              library="default"
+              rotate="0"
+              style="--rotate-angle: 0deg"
+            ></wa-icon>
+          </a>
+        </h3>
+        <wa-tooltip
+          for="radio-2-permalink"
+          id="wa-tooltip-xH599UH2cchd1HTwXCZ_n"
+          >Link to This Section</wa-tooltip
+        >
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th><code>size=""</code></th>
+                <th><code>.wa-size-[xs|s|m|l|xl]</code></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><code>xs</code></th>
+                <td>
+                  <wa-radio
+                    size="xs"
+                    role="radio"
+                    tabindex="-1"
+                    aria-disabled="false"
+                    appearance="default"
+                    aria-checked="false"
+                    >Radio</wa-radio
+                  >
+                </td>
+                <td>
+                  <wa-radio
+                    class="wa-size-xs"
+                    role="radio"
+                    tabindex="-1"
+                    aria-disabled="false"
+                    appearance="default"
+                    aria-checked="false"
+                    >Radio</wa-radio
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th><code>s</code></th>
+                <td>
+                  <wa-radio
+                    size="s"
+                    role="radio"
+                    tabindex="-1"
+                    aria-disabled="false"
+                    appearance="default"
+                    aria-checked="false"
+                    >Radio</wa-radio
+                  >
+                </td>
+                <td>
+                  <wa-radio
+                    class="wa-size-s"
+                    role="radio"
+                    tabindex="-1"
+                    aria-disabled="false"
+                    appearance="default"
+                    aria-checked="false"
+                    >Radio</wa-radio
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th><code>m</code></th>
+                <td>
+                  <wa-radio
+                    size="m"
+                    role="radio"
+                    tabindex="-1"
+                    aria-disabled="false"
+                    appearance="default"
+                    aria-checked="false"
+                    >Radio</wa-radio
+                  >
+                </td>
+                <td>
+                  <wa-radio
+                    class="wa-size-m"
+                    role="radio"
+                    tabindex="-1"
+                    aria-disabled="false"
+                    appearance="default"
+                    aria-checked="false"
+                    >Radio</wa-radio
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th><code>l</code></th>
+                <td>
+                  <wa-radio
+                    size="l"
+                    role="radio"
+                    tabindex="-1"
+                    aria-disabled="false"
+                    appearance="default"
+                    aria-checked="false"
+                    >Radio</wa-radio
+                  >
+                </td>
+                <td>
+                  <wa-radio
+                    class="wa-size-l"
+                    role="radio"
+                    tabindex="-1"
+                    aria-disabled="false"
+                    appearance="default"
+                    aria-checked="false"
+                    >Radio</wa-radio
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th><code>xl</code></th>
+                <td>
+                  <wa-radio
+                    size="xl"
+                    role="radio"
+                    tabindex="-1"
+                    aria-disabled="false"
+                    appearance="default"
+                    aria-checked="false"
+                    >Radio</wa-radio
+                  >
+                </td>
+                <td>
+                  <wa-radio
+                    class="wa-size-xl"
+                    role="radio"
+                    tabindex="-1"
+                    aria-disabled="false"
+                    appearance="default"
+                    aria-checked="false"
+                    >Radio</wa-radio
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <wa-divider
+          role="separator"
+          aria-orientation="horizontal"
+          orientation="horizontal"
+        ></wa-divider>
+        <h3 id="radio-button" class="anchor-heading">
+          Radio Button
+          <a
+            id="radio-button-permalink"
+            href="#radio-button"
+            aria-labelledby="wa-tooltip-SIFcH8Onjvv54RKrkclX1"
+          >
+            <wa-icon
+              name="hashtag"
+              label="Link to This Section"
+              role="img"
+              aria-label="Link to This Section"
+              library="default"
+              rotate="0"
+              style="--rotate-angle: 0deg"
+            ></wa-icon>
+          </a>
+        </h3>
+        <wa-tooltip
+          for="radio-button-permalink"
+          id="wa-tooltip-SIFcH8Onjvv54RKrkclX1"
+          >Link to This Section</wa-tooltip
+        >
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th><code>size=""</code></th>
+                <th><code>.wa-size-[xs|s|m|l|xl]</code></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><code>xs</code></th>
+                <td>
+                  <wa-radio-group orientation="horizontal">
+                    <wa-radio
+                      appearance="button"
+                      size="xs"
+                      value="1"
+                      role="radio"
+                      tabindex="0"
+                      aria-disabled="false"
+                      aria-checked="false"
+                      data-wa-radio-horizontal=""
+                      data-wa-radio-first=""
+                      >Radio</wa-radio
+                    >
+                    <wa-radio
+                      appearance="button"
+                      size="xs"
+                      value="2"
+                      role="radio"
+                      tabindex="-1"
+                      aria-disabled="false"
+                      aria-checked="false"
+                      data-wa-radio-horizontal=""
+                      data-wa-radio-last=""
+                      >Button</wa-radio
+                    >
+                  </wa-radio-group>
+                </td>
+                <td>
+                  <wa-radio-group orientation="horizontal">
+                    <wa-radio
+                      appearance="button"
+                      class="wa-size-xs"
+                      value="1"
+                      role="radio"
+                      tabindex="0"
+                      aria-disabled="false"
+                      aria-checked="false"
+                      data-wa-radio-horizontal=""
+                      data-wa-radio-first=""
+                      >Radio</wa-radio
+                    >
+                    <wa-radio
+                      appearance="button"
+                      class="wa-size-xs"
+                      value="2"
+                      role="radio"
+                      tabindex="-1"
+                      aria-disabled="false"
+                      aria-checked="false"
+                      data-wa-radio-horizontal=""
+                      data-wa-radio-last=""
+                      >Button</wa-radio
+                    >
+                  </wa-radio-group>
+                </td>
+              </tr>
+              <tr>
+                <th><code>s</code></th>
+                <td>
+                  <wa-radio-group orientation="horizontal">
+                    <wa-radio
+                      appearance="button"
+                      size="s"
+                      value="1"
+                      role="radio"
+                      tabindex="0"
+                      aria-disabled="false"
+                      aria-checked="false"
+                      data-wa-radio-horizontal=""
+                      data-wa-radio-first=""
+                      >Radio</wa-radio
+                    >
+                    <wa-radio
+                      appearance="button"
+                      size="s"
+                      value="2"
+                      role="radio"
+                      tabindex="-1"
+                      aria-disabled="false"
+                      aria-checked="false"
+                      data-wa-radio-horizontal=""
+                      data-wa-radio-last=""
+                      >Button</wa-radio
+                    >
+                  </wa-radio-group>
+                </td>
+                <td>
+                  <wa-radio-group orientation="horizontal">
+                    <wa-radio
+                      appearance="button"
+                      class="wa-size-s"
+                      value="1"
+                      role="radio"
+                      tabindex="0"
+                      aria-disabled="false"
+                      aria-checked="false"
+                      data-wa-radio-horizontal=""
+                      data-wa-radio-first=""
+                      >Radio</wa-radio
+                    >
+                    <wa-radio
+                      appearance="button"
+                      class="wa-size-s"
+                      value="2"
+                      role="radio"
+                      tabindex="-1"
+                      aria-disabled="false"
+                      aria-checked="false"
+                      data-wa-radio-horizontal=""
+                      data-wa-radio-last=""
+                      >Button</wa-radio
+                    >
+                  </wa-radio-group>
+                </td>
+              </tr>
+              <tr>
+                <th><code>m</code></th>
+                <td>
+                  <wa-radio-group orientation="horizontal">
+                    <wa-radio
+                      appearance="button"
+                      size="m"
+                      value="1"
+                      role="radio"
+                      tabindex="0"
+                      aria-disabled="false"
+                      aria-checked="false"
+                      data-wa-radio-horizontal=""
+                      data-wa-radio-first=""
+                      >Radio</wa-radio
+                    >
+                    <wa-radio
+                      appearance="button"
+                      size="m"
+                      value="2"
+                      role="radio"
+                      tabindex="-1"
+                      aria-disabled="false"
+                      aria-checked="false"
+                      data-wa-radio-horizontal=""
+                      data-wa-radio-last=""
+                      >Button</wa-radio
+                    >
+                  </wa-radio-group>
+                </td>
+                <td>
+                  <wa-radio-group orientation="horizontal">
+                    <wa-radio
+                      appearance="button"
+                      class="wa-size-m"
+                      value="1"
+                      role="radio"
+                      tabindex="0"
+                      aria-disabled="false"
+                      aria-checked="false"
+                      data-wa-radio-horizontal=""
+                      data-wa-radio-first=""
+                      >Radio</wa-radio
+                    >
+                    <wa-radio
+                      appearance="button"
+                      class="wa-size-m"
+                      value="2"
+                      role="radio"
+                      tabindex="-1"
+                      aria-disabled="false"
+                      aria-checked="false"
+                      data-wa-radio-horizontal=""
+                      data-wa-radio-last=""
+                      >Button</wa-radio
+                    >
+                  </wa-radio-group>
+                </td>
+              </tr>
+              <tr>
+                <th><code>l</code></th>
+                <td>
+                  <wa-radio-group orientation="horizontal">
+                    <wa-radio
+                      appearance="button"
+                      size="l"
+                      value="1"
+                      role="radio"
+                      tabindex="0"
+                      aria-disabled="false"
+                      aria-checked="false"
+                      data-wa-radio-horizontal=""
+                      data-wa-radio-first=""
+                      >Radio</wa-radio
+                    >
+                    <wa-radio
+                      appearance="button"
+                      size="l"
+                      value="2"
+                      role="radio"
+                      tabindex="-1"
+                      aria-disabled="false"
+                      aria-checked="false"
+                      data-wa-radio-horizontal=""
+                      data-wa-radio-last=""
+                      >Button</wa-radio
+                    >
+                  </wa-radio-group>
+                </td>
+                <td>
+                  <wa-radio-group orientation="horizontal">
+                    <wa-radio
+                      appearance="button"
+                      class="wa-size-l"
+                      value="1"
+                      role="radio"
+                      tabindex="0"
+                      aria-disabled="false"
+                      aria-checked="false"
+                      data-wa-radio-horizontal=""
+                      data-wa-radio-first=""
+                      >Radio</wa-radio
+                    >
+                    <wa-radio
+                      appearance="button"
+                      class="wa-size-l"
+                      value="2"
+                      role="radio"
+                      tabindex="-1"
+                      aria-disabled="false"
+                      aria-checked="false"
+                      data-wa-radio-horizontal=""
+                      data-wa-radio-last=""
+                      >Button</wa-radio
+                    >
+                  </wa-radio-group>
+                </td>
+              </tr>
+              <tr>
+                <th><code>xl</code></th>
+                <td>
+                  <wa-radio-group orientation="horizontal">
+                    <wa-radio
+                      appearance="button"
+                      size="xl"
+                      value="1"
+                      role="radio"
+                      tabindex="0"
+                      aria-disabled="false"
+                      aria-checked="false"
+                      data-wa-radio-horizontal=""
+                      data-wa-radio-first=""
+                      >Radio</wa-radio
+                    >
+                    <wa-radio
+                      appearance="button"
+                      size="xl"
+                      value="2"
+                      role="radio"
+                      tabindex="-1"
+                      aria-disabled="false"
+                      aria-checked="false"
+                      data-wa-radio-horizontal=""
+                      data-wa-radio-last=""
+                      >Button</wa-radio
+                    >
+                  </wa-radio-group>
+                </td>
+                <td>
+                  <wa-radio-group orientation="horizontal">
+                    <wa-radio
+                      appearance="button"
+                      class="wa-size-xl"
+                      value="1"
+                      role="radio"
+                      tabindex="0"
+                      aria-disabled="false"
+                      aria-checked="false"
+                      data-wa-radio-horizontal=""
+                      data-wa-radio-first=""
+                      >Radio</wa-radio
+                    >
+                    <wa-radio
+                      appearance="button"
+                      class="wa-size-xl"
+                      value="2"
+                      role="radio"
+                      tabindex="-1"
+                      aria-disabled="false"
+                      aria-checked="false"
+                      data-wa-radio-horizontal=""
+                      data-wa-radio-last=""
+                      >Button</wa-radio
+                    >
+                  </wa-radio-group>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <wa-divider
+          role="separator"
+          aria-orientation="horizontal"
+          orientation="horizontal"
+        ></wa-divider>
+        <h3 id="radio-group" class="anchor-heading">
+          Radio Group
+          <a
+            id="radio-group-permalink"
+            href="#radio-group"
+            aria-labelledby="wa-tooltip-Fu2JvYkevPkEY15JGT4ql"
+          >
+            <wa-icon
+              name="hashtag"
+              label="Link to This Section"
+              role="img"
+              aria-label="Link to This Section"
+              library="default"
+              rotate="0"
+              style="--rotate-angle: 0deg"
+            ></wa-icon>
+          </a>
+        </h3>
+        <wa-tooltip
+          for="radio-group-permalink"
+          id="wa-tooltip-Fu2JvYkevPkEY15JGT4ql"
+          >Link to This Section</wa-tooltip
+        >
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th><code>size=""</code></th>
+                <th><code>.wa-size-[xs|s|m|l|xl]</code></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><code>xs</code></th>
+                <td>
+                  <div class="wa-stack">
+                    <wa-radio-group
+                      label="Radio Group"
+                      hint="Hint"
+                      size="xs"
+                      orientation="vertical"
+                    >
+                      <wa-radio
+                        value="1"
+                        role="radio"
+                        tabindex="0"
+                        aria-disabled="false"
+                        appearance="default"
+                        aria-checked="false"
+                        size="xs"
+                        data-wa-radio-vertical=""
+                        data-wa-radio-first=""
+                        >Radio 1</wa-radio
+                      >
+                      <wa-radio
+                        value="2"
+                        role="radio"
+                        tabindex="-1"
+                        aria-disabled="false"
+                        appearance="default"
+                        aria-checked="false"
+                        size="xs"
+                        data-wa-radio-vertical=""
+                        data-wa-radio-last=""
+                        >Radio 2</wa-radio
+                      >
+                    </wa-radio-group>
+                    <wa-radio-group
+                      orientation="horizontal"
+                      label="Radio Button Group"
+                      hint="Hint"
+                      size="xs"
+                    >
+                      <wa-radio
+                        appearance="button"
+                        value="1"
+                        role="radio"
+                        tabindex="0"
+                        aria-disabled="false"
+                        aria-checked="false"
+                        size="xs"
+                        data-wa-radio-horizontal=""
+                        data-wa-radio-first=""
+                        >Radio 1</wa-radio
+                      >
+                      <wa-radio
+                        appearance="button"
+                        value="2"
+                        role="radio"
+                        tabindex="-1"
+                        aria-disabled="false"
+                        aria-checked="false"
+                        size="xs"
+                        data-wa-radio-horizontal=""
+                        data-wa-radio-last=""
+                        >Radio 2</wa-radio
+                      >
+                    </wa-radio-group>
+                  </div>
+                </td>
+                <td>
+                  <div class="wa-stack">
+                    <wa-radio-group
+                      label="Radio Group"
+                      hint="Hint"
+                      class="wa-size-xs"
+                      orientation="vertical"
+                    >
+                      <wa-radio
+                        value="1"
+                        role="radio"
+                        tabindex="0"
+                        aria-disabled="false"
+                        appearance="default"
+                        aria-checked="false"
+                        data-wa-radio-vertical=""
+                        data-wa-radio-first=""
+                        >Radio 1</wa-radio
+                      >
+                      <wa-radio
+                        value="2"
+                        role="radio"
+                        tabindex="-1"
+                        aria-disabled="false"
+                        appearance="default"
+                        aria-checked="false"
+                        data-wa-radio-vertical=""
+                        data-wa-radio-last=""
+                        >Radio 2</wa-radio
+                      >
+                    </wa-radio-group>
+                    <wa-radio-group
+                      orientation="horizontal"
+                      label="Radio Button Group"
+                      hint="Hint"
+                      class="wa-size-xs"
+                    >
+                      <wa-radio
+                        appearance="button"
+                        value="1"
+                        role="radio"
+                        tabindex="0"
+                        aria-disabled="false"
+                        aria-checked="false"
+                        data-wa-radio-horizontal=""
+                        data-wa-radio-first=""
+                        >Radio 1</wa-radio
+                      >
+                      <wa-radio
+                        appearance="button"
+                        value="2"
+                        role="radio"
+                        tabindex="-1"
+                        aria-disabled="false"
+                        aria-checked="false"
+                        data-wa-radio-horizontal=""
+                        data-wa-radio-last=""
+                        >Radio 2</wa-radio
+                      >
+                    </wa-radio-group>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th><code>s</code></th>
+                <td>
+                  <div class="wa-stack">
+                    <wa-radio-group
+                      label="Radio Group"
+                      hint="Hint"
+                      size="s"
+                      orientation="vertical"
+                    >
+                      <wa-radio
+                        value="1"
+                        role="radio"
+                        tabindex="0"
+                        aria-disabled="false"
+                        appearance="default"
+                        aria-checked="false"
+                        size="s"
+                        data-wa-radio-vertical=""
+                        data-wa-radio-first=""
+                        >Radio 1</wa-radio
+                      >
+                      <wa-radio
+                        value="2"
+                        role="radio"
+                        tabindex="-1"
+                        aria-disabled="false"
+                        appearance="default"
+                        aria-checked="false"
+                        size="s"
+                        data-wa-radio-vertical=""
+                        data-wa-radio-last=""
+                        >Radio 2</wa-radio
+                      >
+                    </wa-radio-group>
+                    <wa-radio-group
+                      orientation="horizontal"
+                      label="Radio Button Group"
+                      hint="Hint"
+                      size="s"
+                    >
+                      <wa-radio
+                        appearance="button"
+                        value="1"
+                        role="radio"
+                        tabindex="0"
+                        aria-disabled="false"
+                        aria-checked="false"
+                        size="s"
+                        data-wa-radio-horizontal=""
+                        data-wa-radio-first=""
+                        >Radio 1</wa-radio
+                      >
+                      <wa-radio
+                        appearance="button"
+                        value="2"
+                        role="radio"
+                        tabindex="-1"
+                        aria-disabled="false"
+                        aria-checked="false"
+                        size="s"
+                        data-wa-radio-horizontal=""
+                        data-wa-radio-last=""
+                        >Radio 2</wa-radio
+                      >
+                    </wa-radio-group>
+                  </div>
+                </td>
+                <td>
+                  <div class="wa-stack">
+                    <wa-radio-group
+                      label="Radio Group"
+                      hint="Hint"
+                      class="wa-size-s"
+                      orientation="vertical"
+                    >
+                      <wa-radio
+                        value="1"
+                        role="radio"
+                        tabindex="0"
+                        aria-disabled="false"
+                        appearance="default"
+                        aria-checked="false"
+                        data-wa-radio-vertical=""
+                        data-wa-radio-first=""
+                        >Radio 1</wa-radio
+                      >
+                      <wa-radio
+                        value="2"
+                        role="radio"
+                        tabindex="-1"
+                        aria-disabled="false"
+                        appearance="default"
+                        aria-checked="false"
+                        data-wa-radio-vertical=""
+                        data-wa-radio-last=""
+                        >Radio 2</wa-radio
+                      >
+                    </wa-radio-group>
+                    <wa-radio-group
+                      orientation="horizontal"
+                      label="Radio Button Group"
+                      hint="Hint"
+                      class="wa-size-s"
+                    >
+                      <wa-radio
+                        appearance="button"
+                        value="1"
+                        role="radio"
+                        tabindex="0"
+                        aria-disabled="false"
+                        aria-checked="false"
+                        data-wa-radio-horizontal=""
+                        data-wa-radio-first=""
+                        >Radio 1</wa-radio
+                      >
+                      <wa-radio
+                        appearance="button"
+                        value="2"
+                        role="radio"
+                        tabindex="-1"
+                        aria-disabled="false"
+                        aria-checked="false"
+                        data-wa-radio-horizontal=""
+                        data-wa-radio-last=""
+                        >Radio 2</wa-radio
+                      >
+                    </wa-radio-group>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th><code>m</code></th>
+                <td>
+                  <div class="wa-stack">
+                    <wa-radio-group
+                      label="Radio Group"
+                      hint="Hint"
+                      size="m"
+                      orientation="vertical"
+                    >
+                      <wa-radio
+                        value="1"
+                        role="radio"
+                        tabindex="0"
+                        aria-disabled="false"
+                        appearance="default"
+                        aria-checked="false"
+                        size="m"
+                        data-wa-radio-vertical=""
+                        data-wa-radio-first=""
+                        >Radio 1</wa-radio
+                      >
+                      <wa-radio
+                        value="2"
+                        role="radio"
+                        tabindex="-1"
+                        aria-disabled="false"
+                        appearance="default"
+                        aria-checked="false"
+                        size="m"
+                        data-wa-radio-vertical=""
+                        data-wa-radio-last=""
+                        >Radio 2</wa-radio
+                      >
+                    </wa-radio-group>
+                    <wa-radio-group
+                      orientation="horizontal"
+                      label="Radio Button Group"
+                      hint="Hint"
+                      size="m"
+                    >
+                      <wa-radio
+                        appearance="button"
+                        value="1"
+                        role="radio"
+                        tabindex="0"
+                        aria-disabled="false"
+                        aria-checked="false"
+                        size="m"
+                        data-wa-radio-horizontal=""
+                        data-wa-radio-first=""
+                        >Radio 1</wa-radio
+                      >
+                      <wa-radio
+                        appearance="button"
+                        value="2"
+                        role="radio"
+                        tabindex="-1"
+                        aria-disabled="false"
+                        aria-checked="false"
+                        size="m"
+                        data-wa-radio-horizontal=""
+                        data-wa-radio-last=""
+                        >Radio 2</wa-radio
+                      >
+                    </wa-radio-group>
+                  </div>
+                </td>
+                <td>
+                  <div class="wa-stack">
+                    <wa-radio-group
+                      label="Radio Group"
+                      hint="Hint"
+                      class="wa-size-m"
+                      orientation="vertical"
+                    >
+                      <wa-radio
+                        value="1"
+                        role="radio"
+                        tabindex="0"
+                        aria-disabled="false"
+                        appearance="default"
+                        aria-checked="false"
+                        data-wa-radio-vertical=""
+                        data-wa-radio-first=""
+                        >Radio 1</wa-radio
+                      >
+                      <wa-radio
+                        value="2"
+                        role="radio"
+                        tabindex="-1"
+                        aria-disabled="false"
+                        appearance="default"
+                        aria-checked="false"
+                        data-wa-radio-vertical=""
+                        data-wa-radio-last=""
+                        >Radio 2</wa-radio
+                      >
+                    </wa-radio-group>
+                    <wa-radio-group
+                      orientation="horizontal"
+                      label="Radio Button Group"
+                      hint="Hint"
+                      class="wa-size-m"
+                    >
+                      <wa-radio
+                        appearance="button"
+                        value="1"
+                        role="radio"
+                        tabindex="0"
+                        aria-disabled="false"
+                        aria-checked="false"
+                        data-wa-radio-horizontal=""
+                        data-wa-radio-first=""
+                        >Radio 1</wa-radio
+                      >
+                      <wa-radio
+                        appearance="button"
+                        value="2"
+                        role="radio"
+                        tabindex="-1"
+                        aria-disabled="false"
+                        aria-checked="false"
+                        data-wa-radio-horizontal=""
+                        data-wa-radio-last=""
+                        >Radio 2</wa-radio
+                      >
+                    </wa-radio-group>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th><code>l</code></th>
+                <td>
+                  <div class="wa-stack">
+                    <wa-radio-group
+                      label="Radio Group"
+                      hint="Hint"
+                      size="l"
+                      orientation="vertical"
+                    >
+                      <wa-radio
+                        value="1"
+                        role="radio"
+                        tabindex="0"
+                        aria-disabled="false"
+                        appearance="default"
+                        aria-checked="false"
+                        size="l"
+                        data-wa-radio-vertical=""
+                        data-wa-radio-first=""
+                        >Radio 1</wa-radio
+                      >
+                      <wa-radio
+                        value="2"
+                        role="radio"
+                        tabindex="-1"
+                        aria-disabled="false"
+                        appearance="default"
+                        aria-checked="false"
+                        size="l"
+                        data-wa-radio-vertical=""
+                        data-wa-radio-last=""
+                        >Radio 2</wa-radio
+                      >
+                    </wa-radio-group>
+                    <wa-radio-group
+                      orientation="horizontal"
+                      label="Radio Button Group"
+                      hint="Hint"
+                      size="l"
+                    >
+                      <wa-radio
+                        appearance="button"
+                        value="1"
+                        role="radio"
+                        tabindex="0"
+                        aria-disabled="false"
+                        aria-checked="false"
+                        size="l"
+                        data-wa-radio-horizontal=""
+                        data-wa-radio-first=""
+                        >Radio 1</wa-radio
+                      >
+                      <wa-radio
+                        appearance="button"
+                        value="2"
+                        role="radio"
+                        tabindex="-1"
+                        aria-disabled="false"
+                        aria-checked="false"
+                        size="l"
+                        data-wa-radio-horizontal=""
+                        data-wa-radio-last=""
+                        >Radio 2</wa-radio
+                      >
+                    </wa-radio-group>
+                  </div>
+                </td>
+                <td>
+                  <div class="wa-stack">
+                    <wa-radio-group
+                      label="Radio Group"
+                      hint="Hint"
+                      class="wa-size-l"
+                      orientation="vertical"
+                    >
+                      <wa-radio
+                        value="1"
+                        role="radio"
+                        tabindex="0"
+                        aria-disabled="false"
+                        appearance="default"
+                        aria-checked="false"
+                        data-wa-radio-vertical=""
+                        data-wa-radio-first=""
+                        >Radio 1</wa-radio
+                      >
+                      <wa-radio
+                        value="2"
+                        role="radio"
+                        tabindex="-1"
+                        aria-disabled="false"
+                        appearance="default"
+                        aria-checked="false"
+                        data-wa-radio-vertical=""
+                        data-wa-radio-last=""
+                        >Radio 2</wa-radio
+                      >
+                    </wa-radio-group>
+                    <wa-radio-group
+                      orientation="horizontal"
+                      label="Radio Button Group"
+                      hint="Hint"
+                      class="wa-size-l"
+                    >
+                      <wa-radio
+                        appearance="button"
+                        value="1"
+                        role="radio"
+                        tabindex="0"
+                        aria-disabled="false"
+                        aria-checked="false"
+                        data-wa-radio-horizontal=""
+                        data-wa-radio-first=""
+                        >Radio 1</wa-radio
+                      >
+                      <wa-radio
+                        appearance="button"
+                        value="2"
+                        role="radio"
+                        tabindex="-1"
+                        aria-disabled="false"
+                        aria-checked="false"
+                        data-wa-radio-horizontal=""
+                        data-wa-radio-last=""
+                        >Radio 2</wa-radio
+                      >
+                    </wa-radio-group>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th><code>xl</code></th>
+                <td>
+                  <div class="wa-stack">
+                    <wa-radio-group
+                      label="Radio Group"
+                      hint="Hint"
+                      size="xl"
+                      orientation="vertical"
+                    >
+                      <wa-radio
+                        value="1"
+                        role="radio"
+                        tabindex="0"
+                        aria-disabled="false"
+                        appearance="default"
+                        aria-checked="false"
+                        size="xl"
+                        data-wa-radio-vertical=""
+                        data-wa-radio-first=""
+                        >Radio 1</wa-radio
+                      >
+                      <wa-radio
+                        value="2"
+                        role="radio"
+                        tabindex="-1"
+                        aria-disabled="false"
+                        appearance="default"
+                        aria-checked="false"
+                        size="xl"
+                        data-wa-radio-vertical=""
+                        data-wa-radio-last=""
+                        >Radio 2</wa-radio
+                      >
+                    </wa-radio-group>
+                    <wa-radio-group
+                      orientation="horizontal"
+                      label="Radio Button Group"
+                      hint="Hint"
+                      size="xl"
+                    >
+                      <wa-radio
+                        appearance="button"
+                        value="1"
+                        role="radio"
+                        tabindex="0"
+                        aria-disabled="false"
+                        aria-checked="false"
+                        size="xl"
+                        data-wa-radio-horizontal=""
+                        data-wa-radio-first=""
+                        >Radio 1</wa-radio
+                      >
+                      <wa-radio
+                        appearance="button"
+                        value="2"
+                        role="radio"
+                        tabindex="-1"
+                        aria-disabled="false"
+                        aria-checked="false"
+                        size="xl"
+                        data-wa-radio-horizontal=""
+                        data-wa-radio-last=""
+                        >Radio 2</wa-radio
+                      >
+                    </wa-radio-group>
+                  </div>
+                </td>
+                <td>
+                  <div class="wa-stack">
+                    <wa-radio-group
+                      label="Radio Group"
+                      hint="Hint"
+                      class="wa-size-xl"
+                      orientation="vertical"
+                    >
+                      <wa-radio
+                        value="1"
+                        role="radio"
+                        tabindex="0"
+                        aria-disabled="false"
+                        appearance="default"
+                        aria-checked="false"
+                        data-wa-radio-vertical=""
+                        data-wa-radio-first=""
+                        >Radio 1</wa-radio
+                      >
+                      <wa-radio
+                        value="2"
+                        role="radio"
+                        tabindex="-1"
+                        aria-disabled="false"
+                        appearance="default"
+                        aria-checked="false"
+                        data-wa-radio-vertical=""
+                        data-wa-radio-last=""
+                        >Radio 2</wa-radio
+                      >
+                    </wa-radio-group>
+                    <wa-radio-group
+                      orientation="horizontal"
+                      label="Radio Button Group"
+                      hint="Hint"
+                      class="wa-size-xl"
+                    >
+                      <wa-radio
+                        appearance="button"
+                        value="1"
+                        role="radio"
+                        tabindex="0"
+                        aria-disabled="false"
+                        aria-checked="false"
+                        data-wa-radio-horizontal=""
+                        data-wa-radio-first=""
+                        >Radio 1</wa-radio
+                      >
+                      <wa-radio
+                        appearance="button"
+                        value="2"
+                        role="radio"
+                        tabindex="-1"
+                        aria-disabled="false"
+                        aria-checked="false"
+                        data-wa-radio-horizontal=""
+                        data-wa-radio-last=""
+                        >Radio 2</wa-radio
+                      >
+                    </wa-radio-group>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <wa-divider
+          role="separator"
+          aria-orientation="horizontal"
+          orientation="horizontal"
+        ></wa-divider>
+        <h3 id="rating" class="anchor-heading">
+          Rating
+          <a
+            id="rating-permalink"
+            href="#rating"
+            aria-labelledby="wa-tooltip-uUBnSBV5BSHT4nd82NFKh"
+          >
+            <wa-icon
+              name="hashtag"
+              label="Link to This Section"
+              role="img"
+              aria-label="Link to This Section"
+              library="default"
+              rotate="0"
+              style="--rotate-angle: 0deg"
+            ></wa-icon>
+          </a>
+        </h3>
+        <wa-tooltip for="rating-permalink" id="wa-tooltip-uUBnSBV5BSHT4nd82NFKh"
+          >Link to This Section</wa-tooltip
+        >
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th><code>size=""</code></th>
+                <th><code>.wa-size-[xs|s|m|l|xl]</code></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><code>xs</code></th>
+                <td>
+                  <wa-rating
+                    size="xs"
+                    aria-valuenow="0"
+                    aria-valuemin="0"
+                    aria-valuemax="5"
+                    aria-disabled="false"
+                    aria-readonly="false"
+                    tabindex="0"
+                    role="slider"
+                  ></wa-rating>
+                </td>
+                <td>
+                  <wa-rating
+                    class="wa-size-xs"
+                    aria-valuenow="0"
+                    aria-valuemin="0"
+                    aria-valuemax="5"
+                    aria-disabled="false"
+                    aria-readonly="false"
+                    tabindex="0"
+                    role="slider"
+                    size="m"
+                  ></wa-rating>
+                </td>
+              </tr>
+              <tr>
+                <th><code>s</code></th>
+                <td>
+                  <wa-rating
+                    size="s"
+                    aria-valuenow="0"
+                    aria-valuemin="0"
+                    aria-valuemax="5"
+                    aria-disabled="false"
+                    aria-readonly="false"
+                    tabindex="0"
+                    role="slider"
+                  ></wa-rating>
+                </td>
+                <td>
+                  <wa-rating
+                    class="wa-size-s"
+                    aria-valuenow="0"
+                    aria-valuemin="0"
+                    aria-valuemax="5"
+                    aria-disabled="false"
+                    aria-readonly="false"
+                    tabindex="0"
+                    role="slider"
+                    size="m"
+                  ></wa-rating>
+                </td>
+              </tr>
+              <tr>
+                <th><code>m</code></th>
+                <td>
+                  <wa-rating
+                    size="m"
+                    aria-valuenow="0"
+                    aria-valuemin="0"
+                    aria-valuemax="5"
+                    aria-disabled="false"
+                    aria-readonly="false"
+                    tabindex="0"
+                    role="slider"
+                  ></wa-rating>
+                </td>
+                <td>
+                  <wa-rating
+                    class="wa-size-m"
+                    aria-valuenow="0"
+                    aria-valuemin="0"
+                    aria-valuemax="5"
+                    aria-disabled="false"
+                    aria-readonly="false"
+                    tabindex="0"
+                    role="slider"
+                    size="m"
+                  ></wa-rating>
+                </td>
+              </tr>
+              <tr>
+                <th><code>l</code></th>
+                <td>
+                  <wa-rating
+                    size="l"
+                    aria-valuenow="0"
+                    aria-valuemin="0"
+                    aria-valuemax="5"
+                    aria-disabled="false"
+                    aria-readonly="false"
+                    tabindex="0"
+                    role="slider"
+                  ></wa-rating>
+                </td>
+                <td>
+                  <wa-rating
+                    class="wa-size-l"
+                    aria-valuenow="0"
+                    aria-valuemin="0"
+                    aria-valuemax="5"
+                    aria-disabled="false"
+                    aria-readonly="false"
+                    tabindex="0"
+                    role="slider"
+                    size="m"
+                  ></wa-rating>
+                </td>
+              </tr>
+              <tr>
+                <th><code>xl</code></th>
+                <td>
+                  <wa-rating
+                    size="xl"
+                    aria-valuenow="0"
+                    aria-valuemin="0"
+                    aria-valuemax="5"
+                    aria-disabled="false"
+                    aria-readonly="false"
+                    tabindex="0"
+                    role="slider"
+                  ></wa-rating>
+                </td>
+                <td>
+                  <wa-rating
+                    class="wa-size-xl"
+                    aria-valuenow="0"
+                    aria-valuemin="0"
+                    aria-valuemax="5"
+                    aria-disabled="false"
+                    aria-readonly="false"
+                    tabindex="0"
+                    role="slider"
+                    size="m"
+                  ></wa-rating>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <wa-divider
+          role="separator"
+          aria-orientation="horizontal"
+          orientation="horizontal"
+        ></wa-divider>
+        <h3 id="select-2" class="anchor-heading">
+          Select
+          <a
+            id="select-2-permalink"
+            href="#select-2"
+            aria-labelledby="wa-tooltip-XnYLOwRNPi7_GwuK9amWm"
+          >
+            <wa-icon
+              name="hashtag"
+              label="Link to This Section"
+              role="img"
+              aria-label="Link to This Section"
+              library="default"
+              rotate="0"
+              style="--rotate-angle: 0deg"
+            ></wa-icon>
+          </a>
+        </h3>
+        <wa-tooltip
+          for="select-2-permalink"
+          id="wa-tooltip-XnYLOwRNPi7_GwuK9amWm"
+          >Link to This Section</wa-tooltip
+        >
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th><code>size=""</code></th>
+                <th><code>.wa-size-[xs|s|m|l|xl]</code></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><code>xs</code></th>
+                <td>
+                  <wa-select
+                    size="xs"
+                    label="Select"
+                    placeholder="Placeholder"
+                    hint="Hint"
+                    name=""
+                    appearance="outlined"
+                    placement="bottom"
+                  >
+                    <wa-option
+                      value="1"
+                      role="option"
+                      aria-selected="false"
+                      aria-disabled="false"
+                      >Option</wa-option
+                    >
+                  </wa-select>
+                </td>
+                <td>
+                  <wa-select
+                    class="wa-size-xs"
+                    label="Select"
+                    placeholder="Placeholder"
+                    hint="Hint"
+                    name=""
+                    size="m"
+                    appearance="outlined"
+                    placement="bottom"
+                  >
+                    <wa-option
+                      value="1"
+                      role="option"
+                      aria-selected="false"
+                      aria-disabled="false"
+                      >Option</wa-option
+                    >
+                  </wa-select>
+                </td>
+              </tr>
+              <tr>
+                <th><code>s</code></th>
+                <td>
+                  <wa-select
+                    size="s"
+                    label="Select"
+                    placeholder="Placeholder"
+                    hint="Hint"
+                    name=""
+                    appearance="outlined"
+                    placement="bottom"
+                  >
+                    <wa-option
+                      value="1"
+                      role="option"
+                      aria-selected="false"
+                      aria-disabled="false"
+                      >Option</wa-option
+                    >
+                  </wa-select>
+                </td>
+                <td>
+                  <wa-select
+                    class="wa-size-s"
+                    label="Select"
+                    placeholder="Placeholder"
+                    hint="Hint"
+                    name=""
+                    size="m"
+                    appearance="outlined"
+                    placement="bottom"
+                  >
+                    <wa-option
+                      value="1"
+                      role="option"
+                      aria-selected="false"
+                      aria-disabled="false"
+                      >Option</wa-option
+                    >
+                  </wa-select>
+                </td>
+              </tr>
+              <tr>
+                <th><code>m</code></th>
+                <td>
+                  <wa-select
+                    size="m"
+                    label="Select"
+                    placeholder="Placeholder"
+                    hint="Hint"
+                    name=""
+                    appearance="outlined"
+                    placement="bottom"
+                  >
+                    <wa-option
+                      value="1"
+                      role="option"
+                      aria-selected="false"
+                      aria-disabled="false"
+                      >Option</wa-option
+                    >
+                  </wa-select>
+                </td>
+                <td>
+                  <wa-select
+                    class="wa-size-m"
+                    label="Select"
+                    placeholder="Placeholder"
+                    hint="Hint"
+                    name=""
+                    size="m"
+                    appearance="outlined"
+                    placement="bottom"
+                  >
+                    <wa-option
+                      value="1"
+                      role="option"
+                      aria-selected="false"
+                      aria-disabled="false"
+                      >Option</wa-option
+                    >
+                  </wa-select>
+                </td>
+              </tr>
+              <tr>
+                <th><code>l</code></th>
+                <td>
+                  <wa-select
+                    size="l"
+                    label="Select"
+                    placeholder="Placeholder"
+                    hint="Hint"
+                    name=""
+                    appearance="outlined"
+                    placement="bottom"
+                  >
+                    <wa-option
+                      value="1"
+                      role="option"
+                      aria-selected="false"
+                      aria-disabled="false"
+                      >Option</wa-option
+                    >
+                  </wa-select>
+                </td>
+                <td>
+                  <wa-select
+                    class="wa-size-l"
+                    label="Select"
+                    placeholder="Placeholder"
+                    hint="Hint"
+                    name=""
+                    size="m"
+                    appearance="outlined"
+                    placement="bottom"
+                  >
+                    <wa-option
+                      value="1"
+                      role="option"
+                      aria-selected="false"
+                      aria-disabled="false"
+                      >Option</wa-option
+                    >
+                  </wa-select>
+                </td>
+              </tr>
+              <tr>
+                <th><code>xl</code></th>
+                <td>
+                  <wa-select
+                    size="xl"
+                    label="Select"
+                    placeholder="Placeholder"
+                    hint="Hint"
+                    name=""
+                    appearance="outlined"
+                    placement="bottom"
+                  >
+                    <wa-option
+                      value="1"
+                      role="option"
+                      aria-selected="false"
+                      aria-disabled="false"
+                      >Option</wa-option
+                    >
+                  </wa-select>
+                </td>
+                <td>
+                  <wa-select
+                    class="wa-size-xl"
+                    label="Select"
+                    placeholder="Placeholder"
+                    hint="Hint"
+                    name=""
+                    size="m"
+                    appearance="outlined"
+                    placement="bottom"
+                  >
+                    <wa-option
+                      value="1"
+                      role="option"
+                      aria-selected="false"
+                      aria-disabled="false"
+                      >Option</wa-option
+                    >
+                  </wa-select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <wa-divider
+          role="separator"
+          aria-orientation="horizontal"
+          orientation="horizontal"
+        ></wa-divider>
+        <h3 id="switch" class="anchor-heading">
+          Switch
+          <a
+            id="switch-permalink"
+            href="#switch"
+            aria-labelledby="wa-tooltip-9KXULFAtum9hdZOgxMq7X"
+          >
+            <wa-icon
+              name="hashtag"
+              label="Link to This Section"
+              role="img"
+              aria-label="Link to This Section"
+              library="default"
+              rotate="0"
+              style="--rotate-angle: 0deg"
+            ></wa-icon>
+          </a>
+        </h3>
+        <wa-tooltip for="switch-permalink" id="wa-tooltip-9KXULFAtum9hdZOgxMq7X"
+          >Link to This Section</wa-tooltip
+        >
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th><code>size=""</code></th>
+                <th><code>.wa-size-[xs|s|m|l|xl]</code></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><code>xs</code></th>
+                <td>
+                  <wa-switch hint="Hint" size="xs" value="on">Switch</wa-switch>
+                </td>
+                <td>
+                  <wa-switch hint="Hint" class="wa-size-xs" size="m" value="on"
+                    >Switch</wa-switch
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th><code>s</code></th>
+                <td>
+                  <wa-switch hint="Hint" size="s" value="on">Switch</wa-switch>
+                </td>
+                <td>
+                  <wa-switch hint="Hint" class="wa-size-s" size="m" value="on"
+                    >Switch</wa-switch
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th><code>m</code></th>
+                <td>
+                  <wa-switch hint="Hint" size="m" value="on">Switch</wa-switch>
+                </td>
+                <td>
+                  <wa-switch hint="Hint" class="wa-size-m" size="m" value="on"
+                    >Switch</wa-switch
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th><code>l</code></th>
+                <td>
+                  <wa-switch hint="Hint" size="l" value="on">Switch</wa-switch>
+                </td>
+                <td>
+                  <wa-switch hint="Hint" class="wa-size-l" size="m" value="on"
+                    >Switch</wa-switch
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th><code>xl</code></th>
+                <td>
+                  <wa-switch hint="Hint" size="xl" value="on">Switch</wa-switch>
+                </td>
+                <td>
+                  <wa-switch hint="Hint" class="wa-size-xl" size="m" value="on"
+                    >Switch</wa-switch
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <wa-divider
+          role="separator"
+          aria-orientation="horizontal"
+          orientation="horizontal"
+        ></wa-divider>
+        <h3 id="textarea-2" class="anchor-heading">
+          Textarea
+          <a
+            id="textarea-2-permalink"
+            href="#textarea-2"
+            aria-labelledby="wa-tooltip-ilUX3lORsxyJFTmLL8-6A"
+          >
+            <wa-icon
+              name="hashtag"
+              label="Link to This Section"
+              role="img"
+              aria-label="Link to This Section"
+              library="default"
+              rotate="0"
+              style="--rotate-angle: 0deg"
+            ></wa-icon>
+          </a>
+        </h3>
+        <wa-tooltip
+          for="textarea-2-permalink"
+          id="wa-tooltip-ilUX3lORsxyJFTmLL8-6A"
+          >Link to This Section</wa-tooltip
+        >
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th><code>size=""</code></th>
+                <th><code>.wa-size-[xs|s|m|l|xl]</code></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><code>xs</code></th>
+                <td>
+                  <wa-textarea
+                    size="xs"
+                    label="Textarea"
+                    placeholder="Placeholder"
+                    hint="Hint"
+                    value=""
+                    appearance="outlined"
+                    resize="vertical"
+                  ></wa-textarea>
+                </td>
+                <td>
+                  <wa-textarea
+                    class="wa-size-xs"
+                    label="Textarea"
+                    placeholder="Placeholder"
+                    hint="Hint"
+                    value=""
+                    size="m"
+                    appearance="outlined"
+                    resize="vertical"
+                  ></wa-textarea>
+                </td>
+              </tr>
+              <tr>
+                <th><code>s</code></th>
+                <td>
+                  <wa-textarea
+                    size="s"
+                    label="Textarea"
+                    placeholder="Placeholder"
+                    hint="Hint"
+                    value=""
+                    appearance="outlined"
+                    resize="vertical"
+                  ></wa-textarea>
+                </td>
+                <td>
+                  <wa-textarea
+                    class="wa-size-s"
+                    label="Textarea"
+                    placeholder="Placeholder"
+                    hint="Hint"
+                    value=""
+                    size="m"
+                    appearance="outlined"
+                    resize="vertical"
+                  ></wa-textarea>
+                </td>
+              </tr>
+              <tr>
+                <th><code>m</code></th>
+                <td>
+                  <wa-textarea
+                    size="m"
+                    label="Textarea"
+                    placeholder="Placeholder"
+                    hint="Hint"
+                    value=""
+                    appearance="outlined"
+                    resize="vertical"
+                  ></wa-textarea>
+                </td>
+                <td>
+                  <wa-textarea
+                    class="wa-size-m"
+                    label="Textarea"
+                    placeholder="Placeholder"
+                    hint="Hint"
+                    value=""
+                    size="m"
+                    appearance="outlined"
+                    resize="vertical"
+                  ></wa-textarea>
+                </td>
+              </tr>
+              <tr>
+                <th><code>l</code></th>
+                <td>
+                  <wa-textarea
+                    size="l"
+                    label="Textarea"
+                    placeholder="Placeholder"
+                    hint="Hint"
+                    value=""
+                    appearance="outlined"
+                    resize="vertical"
+                  ></wa-textarea>
+                </td>
+                <td>
+                  <wa-textarea
+                    class="wa-size-l"
+                    label="Textarea"
+                    placeholder="Placeholder"
+                    hint="Hint"
+                    value=""
+                    size="m"
+                    appearance="outlined"
+                    resize="vertical"
+                  ></wa-textarea>
+                </td>
+              </tr>
+              <tr>
+                <th><code>xl</code></th>
+                <td>
+                  <wa-textarea
+                    size="xl"
+                    label="Textarea"
+                    placeholder="Placeholder"
+                    hint="Hint"
+                    value=""
+                    appearance="outlined"
+                    resize="vertical"
+                  ></wa-textarea>
+                </td>
+                <td>
+                  <wa-textarea
+                    class="wa-size-xl"
+                    label="Textarea"
+                    placeholder="Placeholder"
+                    hint="Hint"
+                    value=""
+                    size="m"
+                    appearance="outlined"
+                    resize="vertical"
+                  ></wa-textarea>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </wa-page>
+  </body>
+</html>
